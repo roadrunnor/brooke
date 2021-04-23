@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Page panier</h1>
+    <h1>Page panier 2</h1>
 </body>
 </html>
