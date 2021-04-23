@@ -10,6 +10,8 @@ class LoginController extends Controller
     public function index(){
         return view('login');
     }
+
+    
     public function loginSubmit(Request $request){
         // $validateData = $request->validate([
         //     'email'=>'required|email',
