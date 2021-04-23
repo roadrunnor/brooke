@@ -14,7 +14,7 @@ class CreateProductView extends Migration
      */
     public function up()
     {
-        Schema::create('product_view', function (Blueprint $table) {
+        Schema::create('viewproduits', function (Blueprint $table) {
             // $table->id();
             // $table->timestamps();
             DB::statement($this->drowpView());
