@@ -14,7 +14,7 @@ class ProductController extends Controller
       $fruits = array("Mango","Orange",'Bnaan', 'Apple','Pineapple' );
       return view('welcome',\compact('fruits'));
   }
-  public function getProdcts(){
+  public function getProducts(){
     $response = DB::table('viewproduits')->get();
     // $product = new product();
     // $product->product_image =  $response->product_image;

@@ -30,4 +30,4 @@ Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-
 Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete');
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
-Route::get('/',[ProductController::class, 'getProdcts'])->name('getAll.getProducts');
+Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
