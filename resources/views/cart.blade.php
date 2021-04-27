@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Test page panier</h1>
+    <h1>C'est la page Cart</h1>
+
+    <h1>Data vient de contôleur: <?php if($product != null){echo $product;}?></h1>
 </body>
 </html>

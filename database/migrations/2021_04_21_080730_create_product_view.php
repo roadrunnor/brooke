@@ -17,6 +17,8 @@ class CreateProductView extends Migration
         Schema::create('viewproduits', function (Blueprint $table) {
             // $table->id();
             // $table->timestamps();
+            // $table->charset = 'utf8mb4';
+            // $table->collation = 'utf8mb4';
             DB::statement($this->drowpView());
             DB::statement($this->productsView());
 

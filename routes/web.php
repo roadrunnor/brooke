@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Facade\FlareClient\Http\Client;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,9 @@ Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('po
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
 Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
+
+//---------Routage panier--------------------
+Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
+Route::get('/addProduct/{product}',[CartController::class, 'addProduct'])->name('cart.addProduct');
+
+//-----------Fin de routage panier--------------

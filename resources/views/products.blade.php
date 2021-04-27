@@ -13,7 +13,8 @@
                             <p> Price : {{$product->product_price}}</p>
                             <p> {{$product->ISBN}}</p>
                             <p> Athor : {{$product->Author}}</p>
-                            <input type="button" value="Add to cart">
+                            <!-- <input type="button" value="Add to cart"> -->
+                            <a class="btn btn-success" href="{{route('cart.addProduct', ['product' => $product->product_id])}}">Add to cart</a>
                         </div> 
                      </div>
                 @endforeach 
