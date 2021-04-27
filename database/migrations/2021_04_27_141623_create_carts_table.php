@@ -15,9 +15,10 @@ class CreateCartsTable extends Migration
     {
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            
-            $table->enum('status', ['init', 'progress', 'paid']);
-            $table->double('total');
+            $table->foreignId('user_id');
+            //init == vide, ongoing == en cours et paid == payé
+            $table->enum('orderStatus', ['init', 'ongoing', 'paid']);
+            $table->double('total');           
             $table->timestamps();
         });
     }
