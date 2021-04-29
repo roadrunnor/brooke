@@ -12,26 +12,12 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h1>C'est la page Cart</h1>
 
-
-    <h1>Affiche tous les paniers</h1>  -->
     <?php
+// {{ $commandLine->product->product_image }}
+        use App\Models\Product;
 
-use App\Models\Product;
-
-use function GuzzleHttp\Promise\all;
-
-    // if($carts){
-    //     foreach ($carts as $cart) {
-    //         foreach( $cart->commandLines()->get() as  $commandLine){
-    //            echo '<h2>' .  $commandLine. '</h2>';
-    //         }
-    //     }       
-    // }
-
-   
-    
+        use function GuzzleHttp\Promise\all;
 
     ?>
     <div class="table-responsive">          
@@ -39,54 +25,54 @@ use function GuzzleHttp\Promise\all;
             <thead>
             <tr>
                 <th>#</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Age</th>
-                <!-- <th>City</th>
-                <th>Country</th> -->
+                <th>Picture</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Brooke et Co Price</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
-            <?php $i=1; ?>
+            <?php $totalQuantity = 0; $i = 1; $saved = 0; $totalPrix = 0;?>
             @if($carts)            
             @foreach($carts[0]->commandLines()->get() as  $commandLine)
-            <!-- $product = new Product(); -->
-            <!-- $products = Product::where('product_id', $commandLine->product_id)->get();
-            $product = $products[0] -->
                 <tr>
                     <td> {{$i++}} </td>
-                    <td>{{ $commandLine->product_id }}</td>
-                    <td>{{ $commandLine->quantity }}</td>
-                    <td>{{ $commandLine->price }}</td>
-                    <!-- <td>New York</td>
-                    <td>{{ $commandLine }}</td> -->
-                    
+                    <td> <img class="rounded" width="75" height="auto" src="images/{{ $commandLine->product->product_image }}" alt="{{ $commandLine->product->product_name }}"></td>
+                    <td>{{ $commandLine->product->product_name }}</td>  
+                    <td>{{ $commandLine->product->product_price }}</td> 
+                    <td>{{ $commandLine->product->product_promotion_price }}</td> 
+                    <td>{{ $commandLine->quantity }} <?php $totalQuantity += $commandLine->quantity ; ?></td>
+                    <td>{{ $commandLine->product->product_promotion_price *  $commandLine->quantity }}</td> 
+                    <td>
+                        <div>
+                            <a class="btn btn-danger" href="destroyCommandLine/{{ $commandLine->id }}">Supprimer</a>
+                        </div>
+                    </td> 
+                    <?php $saved += ( $commandLine->product->product_price - $commandLine->product->product_promotion_price) ; ?>  
+                    <?php $totalPrix +=  ($commandLine->product->product_promotion_price *  $commandLine->quantity); ?>              
                 </tr>
+
             @endforeach               
             @endif
             
 
-            
+                <tr>
+                    <th></th>
+                    <th><a href="{{  url()->previous() }}">Go back</a></th>
+                    <th></th>
+                    <th></th>
+                    <th>you have saved : {{$saved}}</th>
+                    <th>{{ $totalQuantity }}</th>
+                    <th>Total: {{$totalPrix}}</th>
+                    <th> <a href="">PayPal</a> </th>
+                </tr>
             </tbody>
+            
         </table>
     </div>
-
-    <!-- <h1>Affiche le panier en cours</h1>  -->
-    <?php
-    // if($carts){
-    //     foreach( $carts[0]->commandLines()->get() as  $commandLine){
-    //        echo '<h2>' .  $commandLine. '</h2>';
-    //     }
-    // }
-    ?>
-
-    <!-- @if($carts)
-        @foreach($carts[0]->commandLines()->get() as  $commandLine)
-            {{ $commandLine }}
-        @endforeach
-    @endif -->
-
-    
-    
+  
 </body>
 </html>

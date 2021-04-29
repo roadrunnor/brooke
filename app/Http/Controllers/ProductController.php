@@ -15,7 +15,7 @@ class ProductController extends Controller
       return view('welcome',\compact('fruits'));
   }
   public function getProducts(){
-    $response = DB::table('viewproduits')->get();
+    $response = DB::table('products')->get();
     // $product = new product();
     // $product->product_image =  $response->product_image;
     return view('products', compact('response'));

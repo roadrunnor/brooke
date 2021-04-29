@@ -8,6 +8,11 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Product extends Model
 {
+    //--------------Partie panier------
+    protected $primaryKey = 'product_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+    //------------Fin de panier panier------------
     use HasFactory;
     public $fillable =[
         'product_id',
@@ -28,4 +33,11 @@ class Product extends Model
     public function videoGame(){
         return $this->HasOne('App\Models\VideoGame');
     }
+
+
+    //------------Partie panier------------
+    public function commandLines(){
+        return $this->hasMany(CommandLine::class);
+    }
+    //------------Fin de Partie panier------------
 }

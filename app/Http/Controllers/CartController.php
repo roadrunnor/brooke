@@ -10,10 +10,8 @@ use App\Models\Product;
 class CartController extends Controller
 {
     public function index(){
-        // $cart = Cart::where('user_id', 5)->get();
+
         $carts = Cart::where('user_id', 5)->get();
-        //$products = Product::get();
-        //Si le panier est vide
         if(count($carts) == 0){
             $cart = new Cart();
             $cart->orderStatus = 'init';
@@ -23,13 +21,14 @@ class CartController extends Controller
         }
         //Si le panier n'est pas vide
         return view('cart', [
-            // 'product' => 'les anciennes lignes commande'
-            // 'cart' => $cart[0]
-            'carts' => $carts
-           
+            // 'teste' => count($carts)
+            'carts' => $carts           
         ]);
     }
     //-----------------------------------------------
+   
+    //-----------------------------------------------
+    //----------------------------------------------------
     public function addProduct($product_id, $user_id){
          //$tabConditions = ['user_id' => 5 ];
          $user_id = 5;
@@ -40,7 +39,7 @@ class CartController extends Controller
                    if($commandLine->product_id == $product_id){
                     $commandLine->quantity += 1;
                     $commandLine->save();
-                    return;
+                    return redirect()->route('cart.show');
                    }
                  }
                 $commandLine = new CommandLine();
@@ -55,51 +54,24 @@ class CartController extends Controller
                 }
             }
          }
-        // if(count($cart) != 0 && $cart->orderStatus = 'init'){
-            
-        // }
-        // $cart = new Cart();
-        // $cart->total = 12;
-        // $cart->user_id = 1;
-        // $cart->save();
-        // $commandLine = new CommandLine();
-        // $commandLine->cart_id = $cart->id;
-        // $commandLine->product_id = $product;
-        // $commandLine->save();
+         return redirect()->route('cart.show');
+
+        //  return view('cart', [
+        //     'carts' => $carts  
+        // ]);
 
         // return view('cart', [
         //     'product' => $product
         // ]);
 
-        //  return view('cart');
+         //return view('cart');
     }//Fin de addProduct
     //-----------------------------------------------
-    public function addProduct_0($product){
-        // $tabConditions = ['user_id' => 5 ]
-        // $cart = Cart::where('user_id', 5)->get();
-        // if(count($cart) != 0 && $cart->orderStatus = 'init'){
-            $commandLine = new CommandLine();
-            $commandLine->cart_id = 1;
-            $commandLine->product_id = $product;
-            $commandLine->quantity = 1;
-            $commandLine->price = 85;
-            $commandLine->save();
-        // }
-        // $cart = new Cart();
-        // $cart->total = 12;
-        // $cart->user_id = 1;
-        // $cart->save();
-        // $commandLine = new CommandLine();
-        // $commandLine->cart_id = $cart->id;
-        // $commandLine->product_id = $product;
-        // $commandLine->save();
-
-        // return view('cart', [
-        //     'product' => $product
-        // ]);
-
-        //  return view('cart');
-    }//Fin de addProduct
-
+    public function destroy($id){
+        $commandLine = CommandLine::find($id);
+        $commandLine->delete();
+        return redirect()->route('cart.show');
+    }
+   
     //--------------------------------------------------
 }//Fin de contrôleur

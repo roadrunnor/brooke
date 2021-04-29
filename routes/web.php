@@ -36,5 +36,6 @@ Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProdu
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
 Route::get('/addProduct/{product_id}/{user_id}',[CartController::class, 'addProduct'])->name('cart.addProduct');
+Route::get('/destroyCommandLine/{id}',[CartController::class, 'destroy'])->name('destroy.show');
 
 //-----------Fin de routage panier--------------
