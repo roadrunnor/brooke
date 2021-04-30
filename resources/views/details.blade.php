@@ -11,7 +11,7 @@
 					<p> Title : {{$response->product_name}}</p>
 					<p> Description : {{$response->product_description}}</p>
 					<p> Price : {{$response['product_price']}}</p>
-				 	<input type="button" value="Add to cart">
+					<a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $response->product_id, 'user_id' => 5])}}">Add to cart</a>
 				</div> 
 			</div>
 			<div>
@@ -20,7 +20,7 @@
 					<p> Title : {{$response->product_name}}</p>
 					<p> Description : {{$response->product_description}}</p>
 					<p> Price : {{$response['product_price']}}</p>
-				 	<input type="button" value="Add to cart">
+					<a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $response->product_id, 'user_id' => 5])}}">Add to cart</a>
 			</div>
 			<div>
 				<img src="{{ asset('images/'.$response->product_image) }}" width="200px">
@@ -28,7 +28,7 @@
 					<p> Title : {{$response->product_name}}</p>
 					<p> Description : {{$response->product_description}}</p>
 					<p> Price : {{$response['product_price']}}</p>
-				 	<input type="button" value="Add to cart">
+					<a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $response->product_id, 'user_id' => 5])}}">Add to cart</a>
 			</div>
 			
 		</div>
