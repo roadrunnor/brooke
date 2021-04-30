@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->string('category_name',50);
             $table->primary('category_id');
         });
+
         
         DB::table('categories')->insert([
             'category_id'=>'cat-001',

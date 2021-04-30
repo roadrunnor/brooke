@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
                 $table->string('product_image',50);
                 $table->string('sub_category_id',10);
                 $table->primary('product_id');
-                $table->foreign('sub_category_id')->references('sub_category_id')->on('sub_categories') ;
+                $table->foreign('sub_category_id')->references('sub_category_id')->on('sub_categories')->onDelete('cascade') ;
         });
 
         DB::table('products')->insert([
