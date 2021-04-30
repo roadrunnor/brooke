@@ -16,7 +16,7 @@ class Book extends Model
         'book_author',
         'book_editor',
         'book_collection',
-        'book_Link',
+        'book_link',
     ];
       protected $table = "books";
       public function product(){

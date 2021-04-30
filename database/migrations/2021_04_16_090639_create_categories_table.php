@@ -31,7 +31,7 @@ class CreateCategoriesTable extends Migration
 
         DB::table('categories')->insert(array( 
             'category_id'=>'cat-003',
-            'category_name'=>'Video games ',
+            'category_name'=>'Video Games',
         ));
     }
      

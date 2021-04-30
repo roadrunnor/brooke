@@ -22,72 +22,89 @@ class CreateSubCategoriesTable extends Migration
            $table->foreign('category_id')->references('category_id')->on('categories') ;
         });
 
+        /* BOOKS */
+        /* Computer */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-001',
-            'sub_category_name' =>'Informatique',
+            'sub_category_name' => 'Computer',
             'category_id' => 'cat-001'
         ]);
+
+        /* Mathematic */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-002',
-            'sub_category_name' =>'Mathematical',
+            'sub_category_name' => 'Mathematic',
             'category_id' => 'cat-001'
         ]);
+
+        /* History */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-003',
-            'sub_category_name' =>'Hystory',
+            'sub_category_name' => 'History',
             'category_id' => 'cat-001'
         ]);
+
+        /* Geography */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-004',
-            'sub_category_name' =>'Geography',
+            'sub_category_name' => 'Geography',
             'category_id' => 'cat-001'
         ]);
+
+        /* Novel */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-005',
-            'sub_category_name' =>'Roman',
+            'sub_category_name' => 'Novel',
             'category_id' => 'cat-001'
         ]);
+
+
+        /* FILMS */
+        /* Action */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-006',
-            'sub_category_name' =>'Action',
+            'sub_category_name' => 'Action',
             'category_id' => 'cat-002'
         ]);
+
+        /* Fantastic */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-007',
-            'sub_category_name' =>'Fantastic',
+            'sub_category_name' => 'Fantastic',
             'category_id' => 'cat-002'
         ]);
+
+        /* Animation 3D */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-008',
-            'sub_category_name' =>'Animation',
+            'sub_category_name' => 'Animation',
             'category_id' => 'cat-002'
         ]);
+
+        /* Comedy */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-009',
-            'sub_category_name' =>'Comedy ',
+            'sub_category_name' => 'Comedy ',
             'category_id' => 'cat-002'
         ]);
-        DB::table('sub_categories')->insert([
-            'sub_category_id' => 'sub-010',
-            'sub_category_name' =>'Informatique',
-            'category_id' => 'cat-001'
-        ]);
+        
+        /* Video Games */
+
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-011',
-            'sub_category_name' =>'Play station',
+            'sub_category_name' => 'Play station',
             'category_id' => 'cat-003'
         ]);
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-012',
-            'sub_category_name' =>'XBox',
+            'sub_category_name' => 'XBox',
             'category_id' => 'cat-003'
         ]);
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-013',
-            'sub_category_name' =>'Nintendo',
+            'sub_category_name' => 'Nintendo',
             'category_id' => 'cat-003'
         ]);
-
     }
 
     /**

@@ -14,7 +14,6 @@ class CreateBooksTable extends Migration
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->id();
             $table->string('product_id',10);
             $table->integer('book_nb_pages');
             $table->string('book_ISBN',50);
@@ -23,7 +22,6 @@ class CreateBooksTable extends Migration
             $table->string('book_editor',50);
             $table->string('book_collection',50);
             $table->string('book_Link',100);
-           // $table->primary('product_id');
             $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
     });
         DB::table('books')->insert([
@@ -31,8 +29,8 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=>'Nick Morgan',
+            'book_editor'=> 'No Starch Press',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
 
@@ -42,8 +40,8 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=> 'Simon Sarris',
+            'book_editor'=> 'Pearson Education',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
 
@@ -53,8 +51,8 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=> 'Addy Osmani',
+            'book_editor'=>"O'Reilly",
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
 
@@ -64,8 +62,8 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=>'Diogo Resende and Paul Osman',
+            'book_editor'=>'Packt Book Collection',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
 
@@ -75,8 +73,8 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=>"Ruben D'Oliveira",
+            'book_editor'=> 'Kindle Edition',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
 
@@ -86,19 +84,18 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=> 'Jeremy Keith',
+            'book_editor'=> 'A Book Apart',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
-
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-007',
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=> 'Michael Hartl',
+            'book_editor'=> 'Kindle Edition',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
 
@@ -108,10 +105,142 @@ class CreateBooksTable extends Migration
             'book_nb_pages'=>255,
             'book_ISBN'=>'isbn52.29',
             'book_release_date'=> '2020-10-15',
-            'book_author'=>'MahVakili12',
-            'book_editor'=>'web design with Laravel85',
+            'book_author'=> 'Harry Oliver',
+            'book_editor'=> 'Kindle Edition',
             'book_collection'=>'2',
             'book_Link'=>'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-009',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'David R. Brooks',
+            'book_editor' => 'Springer',
+            'book_collection' => '2',
+            'book_Link' =>'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-010',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Azat Mardan',
+            'book_editor' => 'APress',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-011',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Jennifer Niederst Robbins',
+            'book_editor' => "O'Reilly",
+            'book_collection' => '2',
+            'book_Link' =>'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-012',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Kirupa Chinnathambi',
+            'book_editor' => 'Kindle Edition',
+            'book_collection' => '2',
+            'book_Link' =>'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-013',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Joe Morgan',
+            'book_editor' => 'The Pragmatic Programmers',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-014',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Sheela Preuitt',
+            'book_editor' => 'Lerner',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-015',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Jeremy Keith',
+            'book_editor' => 'A Book Apart',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-016',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Bruce Lawson, Remy Sharp',
+            'book_editor' => 'Pearson Education',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-017',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Darren Jones',
+            'book_editor' => 'Sitepoint',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-018',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Laura Lemay, Rafe Colbum, Jennifer Kyrmin',
+            'book_editor' => 'Sams',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-019',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'Group Author: M. Park, M. Zburlea',
+            'book_editor' => 'A Book Apart',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
+
+        ]);
+        DB::table('books')->insert([
+            'product_id' => 'pr-020',
+            'book_nb_pages' => 255,
+            'book_ISBN' => 'isbn52.29',
+            'book_release_date' => '2020-10-15',
+            'book_author' => 'M. Gans, T. Hodge, G. Wilson',
+            'book_editor' => 'A Chapman & Hall Book',
+            'book_collection' => '2',
+            'book_Link' => 'sub-001'
 
         ]);
        

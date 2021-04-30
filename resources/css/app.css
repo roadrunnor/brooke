@@ -1,0 +1,260 @@
+/*
+      |-----------------------------------------------------|
+      | Laboratoires Laravel 8
+      |-----------------------------------------------------|
+*/
+
+body {
+    font-family: 'Roboto', Helvetica;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    color: #434E5E;
+    background: #e9e9e9;
+}
+
+.laboratoire {
+    padding-top: 3em;
+    margin: auto;
+    max-width: 600px;
+}
+
+
+p {
+    line-height: 1.6;
+}
+
+article+article {
+    margin-top: 3em;
+    padding-top: 3em;
+    border-top: 1px solid #434E5E;
+
+}
+
+
+/*
+      -----------------------------------------------------|
+      | Section Sign In
+      |-----------------------------------------------------|
+*/
+
+
+/*
+      -----------------------------------------------------|
+      | Section Register
+      |-----------------------------------------------------|
+*/
+
+
+/*
+      -----------------------------------------------------|
+      | links profile
+      |-----------------------------------------------------|
+*/
+
+
+/*
+      -----------------------------------------------------|
+      | Section Main
+      |-----------------------------------------------------|
+*/
+
+
+.link-on-profile,
+a.link-on-profile {
+    color: #EF3B2D;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    /* font-style: italic; */
+}
+
+.link-on-profile:hover,
+a.link-on-profile:hover {
+    color: grey;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    /* font-style: italic; */
+}
+
+.link-on-resume,
+a.link-on-resume {
+    color: rgb(67, 78, 94);
+    text-decoration: underline;
+}
+
+/*
+      -----------------------------------------------------|
+      | navigation bar
+      |-----------------------------------------------------|
+*/
+.container-fluid {
+    padding: 0;
+}
+
+.bg-dark {
+    height: 2.5em;
+}
+
+.navbar-primary {
+    height: 7.6em;
+    color: #FF1744;
+}
+
+ul.navbar-nav.ml-auto {
+    font-size: 0.8152799878rem;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.top-bar {
+    box-shadow: 0em .1em .52em gray;
+}
+
+.theme-bg-primary-darken {
+    background-color: #FF1744;
+}
+
+.brookebrand {
+    font-size: 2.4655rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.categorybrand {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.51em;
+    text-transform: capitalize;
+    background-color: #FF1744;
+    vertical-align: bottom;
+}
+
+.bg-pink {
+    background-color: #fbe5ed;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.mess-about {
+    padding-top: 0.65em;
+    width: 23em;
+    font-size: 0.69em;
+}
+
+.mess-about a {
+    color: #434E5E;
+}
+
+/*
+      -----------------------------------------------------|
+      | search bar
+      |-----------------------------------------------------|
+*/
+
+.search-container {
+    float: right;
+}
+
+.search-container input {
+    width: 20em;
+    height: 2.345em;
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.search-container button {
+    float: right;
+    width: 4em;
+    height: 2.345em;
+    padding: 6px 10px;
+    background: #434E5E;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*
+      -----------------------------------------------------|
+      | sticky navbar
+      |-----------------------------------------------------|
+*/
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+    box-shadow: 0em .1em .52em gray;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+    padding-top: 60px;
+}
+
+/*
+      -----------------------------------------------------|
+      | products section
+      |-----------------------------------------------------|
+*/
+
+
+/*
+      |-----------------------------------------------------|
+      | Media Query
+      |-----------------------------------------------------|
+*/
+
+@media (min-width: 1200px) {
+
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 960px;
+    }
+
+    .col-lg-4 {
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+}

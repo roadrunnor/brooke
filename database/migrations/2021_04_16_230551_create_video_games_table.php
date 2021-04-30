@@ -21,22 +21,22 @@ class CreateVideoGamesTable extends Migration
         });
 
         DB::table('video_games')->insert([
-            'product_id'=>'pr-015',
+            'product_id'=>'pr-041',
             'game_consoles'=>'PS4',
                       
         ]);
         DB::table('video_games')->insert([
-            'product_id'=>'pr-016',
+            'product_id'=>'pr-042',
             'game_consoles'=>'XBox',
                       
         ]);
         DB::table('video_games')->insert([
-            'product_id'=>'pr-017',
+            'product_id'=>'pr-043',
             'game_consoles'=>'Nintendo',
                       
         ]);
         DB::table('video_games')->insert([
-            'product_id'=>'pr-018',
+            'product_id'=>'pr-044',
             'game_consoles'=>'Xbox',
                       
         ]);

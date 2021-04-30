@@ -19,9 +19,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ProductController::class,'index'])->name('product.index');
- 
+
 //Route::get('/', function () {return view('header');})->name('post.header');
-//Route::get('/',[HeaderControler::class ,'headerProduct'])->name('header.headerProduct');
+//Route::get('/',[HeaderControler::class,'headerProduct'])->name('header.headerProduct');
+
+Route::get('/', function () {return view('header');})->name('header.index');
 Route::get('user',[UserController::class,'index'])->name('user.index');
 Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
 Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
@@ -30,4 +32,4 @@ Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-
 Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete');
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
-Route::get('/',[ProductController::class, 'getProdcts'])->name('getAll.getProducts');
+Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
