@@ -17,7 +17,7 @@ Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('po
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
 Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
-<<<<<<< HEAD
+
 
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
@@ -26,6 +26,6 @@ Route::get('/destroyCommandLine/{id}',[CartController::class, 'destroy'])->name(
 Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('destroyCart.cart');
 
 //-----------Fin de routage panier--------------
-=======
+
 Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
->>>>>>> f435367ec13291183318a1be6257941ac464ac12
+
