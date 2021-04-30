@@ -1,0 +1,7 @@
+.navbar-sticky-top
+{
+    position: fixed;
+    z-index: 999;
+    opacity:1;
+    width: 100%;
+}

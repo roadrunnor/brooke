@@ -18,6 +18,7 @@ class Category extends Model
         'category_id',
         'category_name'
     ];
+<<<<<<< HEAD
 
     public function subCategories(){
         return $this->hasMany(SubCategory::class);
@@ -25,4 +26,17 @@ class Category extends Model
 
 
 }//Fin de la classe
+=======
+    protected $table = "categories";
+    protected $primaryKey = 'category_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
+    public function subCategories()
+    {
+        return $this->hasMany(SubCategory::class, 'category_id', 'category_id');
+    }
+
+}
+>>>>>>> f435367ec13291183318a1be6257941ac464ac12
 

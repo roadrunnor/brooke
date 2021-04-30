@@ -1,3 +1,4 @@
+
         @include('header') 
         <div class="container-fluid">
             <div class="row">
@@ -5,7 +6,8 @@
                     <div class="col-3">
                         @csrf
                         <div class="jumbotron">
-                            <a class="navbar-brand" href="{{ url('/details')}}">
+                            <a class="navbar-brand" href="details/{{$product['product_id']}}">
+                                {{-- <a class="navbar-brand" href="{{ url('details/'.$product->product_id)}}"> --}}
                                 <img src="{{ asset('images/'.$product->product_image) }}" width="200px">
                             </a>
                             <p> Title : {{$product->product_name}}</p>
@@ -22,3 +24,8 @@
         </div>
 </body>
 </html>
+
+  {{-- <a class="navbar-brand" href="{{ url('details/'.$product->product_id)}}"> --}}
+                          
+                                                        
+                            {{-- <a class="btn btn-success" href="{{route('cart.addProduct')}}"> --}}
