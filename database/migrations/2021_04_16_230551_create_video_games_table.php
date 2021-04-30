@@ -17,7 +17,7 @@ class CreateVideoGamesTable extends Migration
         Schema::create('video_games', function (Blueprint $table) {
             $table->string('product_id',10);
             $table->string('game_consoles',50);
-            $table->foreign('product_id')->references('product_id')->on('products') ;
+            $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade') ;
         });
 
         DB::table('video_games')->insert([

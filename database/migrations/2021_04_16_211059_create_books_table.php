@@ -27,12 +27,12 @@ class CreateBooksTable extends Migration
         DB::table('books')->insert([
             'product_id'=>'pr-001',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn51.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=>'Nick Morgan',
             'book_editor'=> 'No Starch Press',
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link1.com'
 
         ]);
         DB::table('books')->insert([
@@ -43,72 +43,77 @@ class CreateBooksTable extends Migration
             'book_author'=> 'Simon Sarris',
             'book_editor'=> 'Pearson Education',
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link2.com'
 
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-003',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn53.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=> 'Addy Osmani',
             'book_editor'=>"O'Reilly",
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link3.com'
 
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-004',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn54.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=>'Diogo Resende and Paul Osman',
             'book_editor'=>'Packt Book Collection',
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link4.com'
 
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-005',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn55.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=>"Ruben D'Oliveira",
             'book_editor'=> 'Kindle Edition',
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link5.com'
 
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-006',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn56.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=> 'Jeremy Keith',
             'book_editor'=> 'A Book Apart',
             'book_collection'=>'2',
+<<<<<<< HEAD
             'book_Link'=>'sub-001'
+=======
+            'book_Link'=>'Link6.com'
+
+>>>>>>> 847c654ed0d7042f8073a400046b04f1887d5d13
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-007',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn57.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=> 'Michael Hartl',
             'book_editor'=> 'Kindle Edition',
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link7.com'
 
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-008',
             'book_nb_pages'=>255,
-            'book_ISBN'=>'isbn52.29',
+            'book_ISBN'=>'isbn58.29',
             'book_release_date'=> '2020-10-15',
             'book_author'=> 'Harry Oliver',
             'book_editor'=> 'Kindle Edition',
             'book_collection'=>'2',
-            'book_Link'=>'sub-001'
+            'book_Link'=>'Link8.com'
 
         ]);
         DB::table('books')->insert([
