@@ -62,11 +62,11 @@
                 <tr>
                     <th></th>
                     <th><a href="{{  url()->previous() }}">Go back</a></th>
-                    <th></th>
-                    <th></th>
+                    <th></th>                  
                     <th>you have saved : {{$saved}}</th>
                     <th>{{ $totalQuantity }}</th>
                     <th>Total: {{$totalPrix}}</th>
+                    <th><a href="destroyCart/{{ $carts[0]->id }}">Vider Panier</a></th>
                     <th> <a href="">PayPal</a> </th>
                 </tr>
             </tbody>

@@ -34,7 +34,7 @@ class CartController extends Controller
          $user_id = 5;
          $carts = Cart::where('user_id', $user_id)->get();
          foreach ($carts as $cart) {
-            if($cart->orderStatus == 'init' || $cart->orderStatus == 'ongoing'){
+            if($cart->orderStatus == 'ongoing'){
                 foreach( $cart->commandLines()->get() as  $commandLine){
                    if($commandLine->product_id == $product_id){
                     $commandLine->quantity += 1;
@@ -43,28 +43,26 @@ class CartController extends Controller
                    }
                  }
                 $commandLine = new CommandLine();
-                $commandLine->cart_id = 1;
+                $commandLine->cart_id = 3;
                 $commandLine->product_id = $product_id;
                 $commandLine->quantity = 1;
                 $commandLine->price = 10.5;
                 $commandLine->save();
-                if($cart->orderStatus == 'init'){
-                    $cart->orderStatus = 'ongoing';
-                    $cart->save();
-                }
+                // if($cart->orderStatus == 'init'){
+                //     $cart->orderStatus = 'ongoing';
+                //     $cart->save();
+                // }
+            }elseif($cart->orderStatus == 'init'){
+                $commandLine = new CommandLine();
+                $commandLine->cart_id = 3;
+                $commandLine->product_id = $product_id;
+                $commandLine->quantity = 1;
+                $commandLine->price = 10.5;
+                $cart->orderStatus = 'ongoing';
+                $commandLine->save();
             }
          }
          return redirect()->route('cart.show');
-
-        //  return view('cart', [
-        //     'carts' => $carts  
-        // ]);
-
-        // return view('cart', [
-        //     'product' => $product
-        // ]);
-
-         //return view('cart');
     }//Fin de addProduct
     //-----------------------------------------------
     public function destroy($id){
@@ -74,4 +72,17 @@ class CartController extends Controller
     }
    
     //--------------------------------------------------
+    public function destroyCart($id){
+        $cart = Cart::find($id);
+        $commandLines = $cart->commandLines;
+        foreach($commandLines as $commandLine){
+            $commandLine->delete();
+        }
+       
+        return redirect()->route('cart.show');
+    }
+   
+    //--------------------------------------------------
+
+    
 }//Fin de contrôleur

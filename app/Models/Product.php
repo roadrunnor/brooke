@@ -25,13 +25,13 @@ class Product extends Model
         'sub_category_id',
     ];
     public function book(){
-        return $this->HasOne('App\Models\Book');
+        return $this->hasOne(Book::class, 'foreign_key');
     }
     public function film(){
-        return $this->HasOne('App\Models\Film');
+        return $this->hasOne(Film::class, 'foreign_key');
     }
     public function videoGame(){
-        return $this->HasOne('App\Models\VideoGame');
+        return $this->hasOne(VideoGame::class, 'foreign_key');
     }
 
 

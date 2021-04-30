@@ -14,6 +14,6 @@ class VideoGame extends Model
     ];
     protected $table = "video_games";
     public function product(){
-        return $this->belongsTo('App\Models\Product');
+        return $this->belongsTo(Product::class, 'foreign_key');
     }
 }

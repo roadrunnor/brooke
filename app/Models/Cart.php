@@ -12,4 +12,10 @@ class Cart extends Model
     public function commandLines(){
         return $this->hasMany(CommandLine::class);
     }
-}
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+
+}//fin de la classe

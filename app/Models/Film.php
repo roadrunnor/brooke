@@ -16,6 +16,6 @@ class Film extends Model
     ];
     protected $table = "films";
     public function product(){
-        return $this->belongsTo('App\Models\Product');
+        return $this->belongsTo(Product::class, 'foreign_key');
     }
 }

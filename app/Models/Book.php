@@ -20,6 +20,6 @@ class Book extends Model
     ];
       protected $table = "books";
       public function product(){
-          return $this->belongsTo('App\Models\Product');
+          return $this->belongsTo(Product::class, 'foreign_key');
       }
 }

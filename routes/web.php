@@ -37,5 +37,11 @@ Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProdu
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
 Route::get('/addProduct/{product_id}/{user_id}',[CartController::class, 'addProduct'])->name('cart.addProduct');
 Route::get('/destroyCommandLine/{id}',[CartController::class, 'destroy'])->name('destroy.show');
+Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('destroyCart.cart');
 
 //-----------Fin de routage panier--------------
+
+//------------Test affiche par cat-------------
+Route::get('/books',[ProductController::class, 'getBooks'])->name('product.getBooks');
+
+//------------Fin de test affiche par cat-------------
