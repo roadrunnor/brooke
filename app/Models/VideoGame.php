@@ -17,10 +17,7 @@ class VideoGame extends Model
     public $incrementing = false;
     protected $keyType = 'string';
     public function product(){
-<<<<<<< HEAD
-        return $this->belongsTo(Product::class, 'foreign_key');
-=======
         return $this->belongsTo(Product::class, 'product_id', 'product_id');
->>>>>>> f435367ec13291183318a1be6257941ac464ac12
+
     }
 }

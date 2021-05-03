@@ -2,29 +2,41 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-<<<<<<< HEAD
-  public function getProducts(){
-    $response = DB::table('products_view')->get();
-    return view('products', compact('response'));
-  }
-}
-=======
     public function index()
     {
     }
    
     public function getProducts()
     {
-        $response = Product:: all();
-        return view('products', compact('response'));
+     // $titles = DB::table('users')->pluck('title');
+      $category = Category::pluck('category_id');
+       $i = 0;
+      foreach ($category as $bigCat) {
+        $subCatId[$i++] = SubCategory::get()->where('category_id', $bigCat)->pluck('sub_category_id');
+      
+      }
+      $subCatIdBook = Product::whereIn('sub_category_id', $subCatId[0])->get();
+      $subCatIdFilm = Product::whereIn('sub_category_id', $subCatId[1])->get();
+      $subCatIdVideoGame = Product::whereIn('sub_category_id', $subCatId[2])->get();
+      return view('products', compact('subCatIdBook'), compact('subCatIdFilm'), compact('subCatIdVideoGame'));
+      
+      // $category.'<br>'.$subCatIdBook.'<br>'.$subCatIdFilm.'<br>'.$subCatIdVideoGame; 
+      
+      //   $response = Product:: all();
+      //   return view('products', compact('response'));
+
+      // return $category.'<br>'.$subCatIdBook.'<br>'.$subCatIdFilm.'<br>'.$subCatIdVideoGame;
+      // .$subCatIdFilm.'<br>'.$subCatIdVideoGame;
     }
+
+
 
     public function getDetail($id)
     {
@@ -49,6 +61,9 @@ class ProductController extends Controller
        
        
        
+    }
+
+  }  
        
        
        
@@ -73,8 +88,4 @@ class ProductController extends Controller
       // return $response."  ******** ".$bookDetail." ==========+++==== ".$filmDetail."   ++++++++++++  ".$vGameDetail ;
       //return view('details', ['response'=>$response], ['bookDetail'=>$bookDetail], ['filmDetail'=>$filmDetail], ['vGameDetail'=>$filmDetail]);
       
-     
-    }
-
-  }
->>>>>>> 847c654ed0d7042f8073a400046b04f1887d5d13
+   

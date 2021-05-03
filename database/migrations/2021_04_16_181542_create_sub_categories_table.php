@@ -22,12 +22,9 @@ class CreateSubCategoriesTable extends Migration
            $table->foreign('category_id')->references('category_id')->on('categories') ;
         });
 
-<<<<<<< HEAD
         /* BOOKS */
         /* Computer */
-=======
 
->>>>>>> 847c654ed0d7042f8073a400046b04f1887d5d13
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-001',
             'sub_category_name' => 'Computer',

@@ -8,15 +8,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 
 
-<<<<<<< HEAD
+
 Route::get('/', [ProductController::class,'index'])->name('product.index');
 
 //Route::get('/', function () {return view('header');})->name('post.header');
 //Route::get('/',[HeaderControler::class,'headerProduct'])->name('header.headerProduct');
 
 Route::get('/', function () {return view('header');})->name('header.index');
-=======
->>>>>>> 847c654ed0d7042f8073a400046b04f1887d5d13
+
 Route::get('user',[UserController::class,'index'])->name('user.index');
 Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
 Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
@@ -25,9 +24,8 @@ Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-
 Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete');
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
-<<<<<<< HEAD
 Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
-=======
+
 Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 
 
@@ -41,4 +39,3 @@ Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('de
 
 Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
 
->>>>>>> 847c654ed0d7042f8073a400046b04f1887d5d13

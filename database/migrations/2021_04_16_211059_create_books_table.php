@@ -87,12 +87,8 @@ class CreateBooksTable extends Migration
             'book_author'=> 'Jeremy Keith',
             'book_editor'=> 'A Book Apart',
             'book_collection'=>'2',
-<<<<<<< HEAD
-            'book_Link'=>'sub-001'
-=======
             'book_Link'=>'Link6.com'
 
->>>>>>> 847c654ed0d7042f8073a400046b04f1887d5d13
         ]);
         DB::table('books')->insert([
             'product_id'=>'pr-007',
