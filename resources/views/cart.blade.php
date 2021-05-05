@@ -36,7 +36,7 @@
             </thead>
             <tbody>
             <?php $totalQuantity = 0; $i = 1; $saved = 0; $totalPrix = 0;?>
-            @if($carts)            
+            @if($carts != null)            
             @foreach($carts[0]->commandLines()->get() as  $commandLine)
                 <tr>
                     <td> {{$i++}} </td>
@@ -56,7 +56,7 @@
                 </tr>
 
             @endforeach               
-            @endif
+          
             
 
                 <tr>
@@ -70,7 +70,7 @@
                     <th> <a href="">PayPal</a> </th>
                 </tr>
             </tbody>
-            
+            @endif
         </table>
     </div>
   

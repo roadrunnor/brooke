@@ -34,7 +34,7 @@ class CartController extends Controller
          $user_id = 5;
          $carts = Cart::where('user_id', $user_id)->get();
          foreach ($carts as $cart) {
-            if($cart->orderStatus == 'ongoing'){
+            if($cart->orderStatus == 'init' || $cart->orderStatus == 'ongoing'){
                 foreach( $cart->commandLines()->get() as  $commandLine){
                    if($commandLine->product_id == $product_id){
                     $commandLine->quantity += 1;
@@ -43,23 +43,15 @@ class CartController extends Controller
                    }
                  }
                 $commandLine = new CommandLine();
-                $commandLine->cart_id = 3;
+                $commandLine->cart_id = $cart->id;
                 $commandLine->product_id = $product_id;
                 $commandLine->quantity = 1;
                 $commandLine->price = 10.5;
                 $commandLine->save();
-                // if($cart->orderStatus == 'init'){
-                //     $cart->orderStatus = 'ongoing';
-                //     $cart->save();
-                // }
-            }elseif($cart->orderStatus == 'init'){
-                $commandLine = new CommandLine();
-                $commandLine->cart_id = 3;
-                $commandLine->product_id = $product_id;
-                $commandLine->quantity = 1;
-                $commandLine->price = 10.5;
-                $cart->orderStatus = 'ongoing';
-                $commandLine->save();
+                if($cart->orderStatus == 'init'){
+                    $cart->orderStatus = 'ongoing';
+                    $cart->save();
+                }
             }
          }
          return redirect()->route('cart.show');
