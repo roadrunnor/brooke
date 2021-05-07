@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\Auth\LoginController as AuthLoginController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\LoginController;
@@ -6,18 +8,37 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
+use Illuminate\Auth\Events\Login;
+use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisterController;
+/* Route::get('user',[UserController::class,'index'])->name('user.index'); */
+
+/* -- Ricardo Login-- */
 
 
-Route::get('user',[UserController::class,'index'])->name('user.index');
-Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
+/* Route::get('/',[UserController::class,'login'])->name('user.index'); */
+// Route::get('/',[LoginController::class,'index']);
+
+/*Route::post('/user',[UserController::class,'login'])->name('user.login');
+Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
+ Route::get('/login',[LoginController::class,'index'])->name('login.index');
+Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit'); 
+ Route::get('/',[UserController::class,'loginSubmit']); */
+/* ----------------- */
+
+
+/* Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
 Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
 Route::get('/add-post',[clientController::class,'addPost'])->name('posts.addPost');
 Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-update');
-Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete');
-Route::get('/login',[LoginController::class,'index'])->name('login.index');
-Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
-Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
+Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete'); */
 
+Route::get('/',[LoginController::class,'index'])->name('login.index');
+Route::post('/',[LoginController::class,'loginSubmit'])->name('login.submit');
+/* Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
+ */
+Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
@@ -29,3 +50,9 @@ Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('de
 
 Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');

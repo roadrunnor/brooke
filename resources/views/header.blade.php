@@ -205,7 +205,7 @@
                                     Delivery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="Contact.php">
+                                <a class="nav-link text-white" href="{{ route('logout') }}">
                                     <span class="pr-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
                                             <g id="user" clip-path="url(#clip-path)">
@@ -217,7 +217,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                    Register or Sign in</a>
+                                    Logout</a>
                             </li>
                         </ul>
                     </div>
