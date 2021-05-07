@@ -14,11 +14,11 @@ class CreateProductView extends Migration
      */
     public function up()
     {
-        Schema::create('viewproduits', function (Blueprint $table) {
+        Schema::create('products_view', function (Blueprint $table) {
             // $table->id();
             // $table->timestamps();
             DB::statement($this->drowpView());
-            DB::statement($this->productsView());
+            DB::statement($this->products_view());
 
         });
     }
@@ -32,10 +32,10 @@ class CreateProductView extends Migration
     {
         Schema::dropIfExists('product_view');
     }
-    private function productsView():string{
+    private function products_view():string{
         return <<<SQL
        
-        create or replace view viewProduits AS 
+        create or replace view products_view AS 
         SELECT products.*, books.book_nb_pages as Pages, books.book_ISBN AS ISBN, books.book_release_date As "Release_date", books.book_author AS Author, books.book_editor AS Editor, books.book_collection AS Collections,
                 books.book_Link AS Link, "" AS Duration, "" AS Age,"" AS Actors, "" AS "Console"
                 from products, books
@@ -57,7 +57,7 @@ class CreateProductView extends Migration
   private function drowpView():string{
     return <<<SQL
    
-      DROP VIEW IF EXISTS viewProduits;
+      DROP VIEW IF EXISTS products_view;
       SQL;
 
   }

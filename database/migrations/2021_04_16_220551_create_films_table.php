@@ -24,42 +24,42 @@ class CreateFilmsTable extends Migration
    
         });
         DB::table('films')->insert([
-            'product_id'=>'pr-009',
+            'product_id'=>'pr-021',
             'film_duration'=>'2:55',
             'film_recommanded_for_age'=>'18+',
             'film_actors'=>'Sylvain'
             
         ]);
         DB::table('films')->insert([
-            'product_id'=>'pr-010',
+            'product_id'=>'pr-022',
             'film_duration'=>'2:55',
             'film_recommanded_for_age'=>'18+',
             'film_actors'=>'Sylvain'
             
         ]);
         DB::table('films')->insert([
-            'product_id'=>'pr-011',
+            'product_id'=>'pr-023',
             'film_duration'=>'2:55',
             'film_recommanded_for_age'=>'18+',
             'film_actors'=>'Sylvain'
             
         ]);
         DB::table('films')->insert([
-            'product_id'=>'pr-012',
+            'product_id'=>'pr-024',
             'film_duration'=>'2:55',
             'film_recommanded_for_age'=>'18+',
             'film_actors'=>'Sylvain'
             
         ]);
         DB::table('films')->insert([
-            'product_id'=>'pr-013',
+            'product_id'=>'pr-025',
             'film_duration'=>'2:55',
             'film_recommanded_for_age'=>'18+',
             'film_actors'=>'Sylvain'
             
         ]);
         DB::table('films')->insert([
-            'product_id'=>'pr-014',
+            'product_id'=>'pr-026',
             'film_duration'=>'2:55',
             'film_recommanded_for_age'=>'18+',
             'film_actors'=>'Sylvain'

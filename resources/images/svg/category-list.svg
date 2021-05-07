@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="16.646" viewBox="0 0 24 16.646">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="24" height="16.646" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Composant_4_4" data-name="Composant 4 – 4" clip-path="url(#clip-path)">
+    <g id="Groupe_22" data-name="Groupe 22" transform="translate(0 7.354)">
+      <g id="Groupe_21" data-name="Groupe 21" transform="translate(0 0)">
+        <path id="Tracé_14" data-name="Tracé 14" d="M23.031,235.318H.969a.969.969,0,1,0,0,1.939H23.031a.969.969,0,1,0,0-1.939Z" transform="translate(0 -235.318)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Groupe_24" data-name="Groupe 24">
+      <g id="Groupe_23" data-name="Groupe 23" transform="translate(0 0)">
+        <path id="Tracé_15" data-name="Tracé 15" d="M16.754,78.439H1.246a1,1,0,1,0,0,1.939H16.754a1,1,0,1,0,0-1.939Z" transform="translate(0 -78.439)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Groupe_26" data-name="Groupe 26" transform="translate(0 14.707)">
+      <g id="Groupe_25" data-name="Groupe 25" transform="translate(0 0)">
+        <path id="Tracé_16" data-name="Tracé 16" d="M11.388,392.2H.612c-.338,0-.612.434-.612.969s.274.969.612.969H11.388c.338,0,.612-.434.612-.969S11.726,392.2,11.388,392.2Z" transform="translate(0 -392.197)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

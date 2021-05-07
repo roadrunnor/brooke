@@ -28,17 +28,34 @@ Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit
 /* ----------------- */
 
 
+<<<<<<< HEAD
 /* Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
+=======
+Route::get('/', [ProductController::class,'index'])->name('product.index');
+
+//Route::get('/', function () {return view('header');})->name('post.header');
+//Route::get('/',[HeaderControler::class,'headerProduct'])->name('header.headerProduct');
+
+Route::get('/', function () {return view('header');})->name('header.index');
+
+Route::get('user',[UserController::class,'index'])->name('user.index');
+Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
+>>>>>>> 17cd1595a86c4f691da2d0957b2ffeb593104602
 Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
 Route::get('/add-post',[clientController::class,'addPost'])->name('posts.addPost');
 Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-update');
 Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete'); */
 
+<<<<<<< HEAD
 Route::get('/',[LoginController::class,'index'])->name('login.index');
 Route::post('/',[LoginController::class,'loginSubmit'])->name('login.submit');
 /* Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
  */
 Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
+=======
+Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
+
+>>>>>>> 17cd1595a86c4f691da2d0957b2ffeb593104602
 
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
