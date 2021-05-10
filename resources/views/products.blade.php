@@ -151,7 +151,7 @@
               @endif
                 @csrf
                 <div class="card card-size">
-                    < <a class="navbar-brand" href="details/{{$product['product_id']}}">
+                     <a class="navbar-brand" href="details/{{$product['product_id']}}">
                         {{-- <img src="{{ asset('images/books/') }}"> --}}
                         <img class="card-img-top" alt="Card image cap" src="{{ asset('images/books/'.$product->product_image) }}">
                     </a>
@@ -260,7 +260,7 @@
               @endif
                 @csrf
                 <div class="card card-size">
-                    < <a class="navbar-brand" href="details/{{$product['product_id']}}">
+                    <a class="navbar-brand" href="details/{{$product['product_id']}}">
                         {{-- <img src="{{ asset('images/books/') }}"> --}}
                         <img class="card-img-top" alt="Card image cap" src="{{ asset('images/films/'.$product->product_image) }}">
                     </a>
@@ -369,7 +369,7 @@
                 @endif
                 @csrf
                 <div class="card card-size">
-                                     < <a class="navbar-brand" href="details/{{$product['product_id']}}">
+                         <a class="navbar-brand" href="details/{{$product['product_id']}}">
                         {{-- <img src="{{ asset('images/books/') }}"> --}}
                         <img class="card-img-top" alt="Card image cap" src="{{ asset('images/vgames/'.$product->product_image) }}">
                     </a>
