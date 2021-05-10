@@ -188,7 +188,7 @@
                                             </div>
                                                 <!-- Sign In -->
                                                 <div class="mt-3 ">
-                                                    <span>Already have an account?<a class="fw-bold" href="#" style="text-decoration: none;"> Sign In </a></span>
+                                                    <span>Already have an account?<a class="fw-bold" href="{{'login'}}" style="text-decoration: none;"> Sign In </a></span>
                                                 </div>
                             </form>
                     </div> 
