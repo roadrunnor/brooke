@@ -75,6 +75,16 @@ class CartController extends Controller
     }
    
     //--------------------------------------------------
+    public function updateCommandLine(){
+        $id = $_POST['id'];
+        $qtn = $_POST['qtn'];
+        $commandLine = CommandLine::find($id);
+        $commandLine->quantity = $qtn; 
+        $commandLine->save();   
+        return redirect()->route('cart.show');
+    }
+   
+    //--------------------------------------------------
 
     
 }//Fin de contrôleur

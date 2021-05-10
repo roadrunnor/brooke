@@ -16,8 +16,10 @@
     <?php
 // {{ $commandLine->product->product_image }}
         use App\Models\Product;
+use Symfony\Component\Console\Input\Input;
 
-        use function GuzzleHttp\Promise\all;
+use function GuzzleHttp\Promise\all;
+use App\Http\Controllers\CartController;
 
     ?>
     <div class="table-responsive">          
@@ -44,7 +46,20 @@
                     <td>{{ $commandLine->product->product_name }}</td>  
                     <td>{{ $commandLine->product->product_price }}</td> 
                     <td>{{ $commandLine->product->product_promotion_price }}</td> 
-                    <td>{{ $commandLine->quantity }} <?php $totalQuantity += $commandLine->quantity ; ?></td>
+                    <td>
+                   
+                    <form role="form" action="{{ route('updateCommandLine.cart') }}" method="POST" name="frmQuat">
+                    {{csrf_field()}}
+                   
+                    <input type="number" name="qtn" value="{{ $commandLine->quantity }}" onchange="this.form.submit()"/>
+                    <input type="hidden" name="id" value=" {{ $commandLine->id }}" />
+
+                    </form>
+                    <!-- <?php 
+                            // echo $_GET['frmQuat'];
+                            // $totalQuantity += $commandLine->quantity ; 
+                    ?> -->
+                    </td>
                     <td>{{ $commandLine->product->product_promotion_price *  $commandLine->quantity }}</td> 
                     <td>
                         <div>

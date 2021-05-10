@@ -16,7 +16,7 @@ class Book extends Model
         'book_author',
         'book_editor',
         'book_collection',
-        'book_Link',
+        'book_link',
     ];
       protected $table = "books";
       protected $primaryKey = 'product_id';
@@ -24,12 +24,10 @@ class Book extends Model
       protected $keyType = 'string';
 
       public function product(){
-<<<<<<< HEAD
-          return $this->belongsTo(Product::class, 'foreign_key');
-=======
+
       return $this->belongsTo(Product::class, 'product_id', 'product_id');
         // return $this->hasOneThrough(App\Product::class, App\Film::class, App\VideoGame::class);
->>>>>>> f435367ec13291183318a1be6257941ac464ac12
+
       }
      
 }
