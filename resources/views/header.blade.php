@@ -221,8 +221,13 @@
                         </ul>
                     </div>
                 </nav>
+<<<<<<< HEAD
                     <!-- navbar brooke & co -->
                     {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+=======
+                <!-- navbar brooke & co -->
+                {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+>>>>>>> b5cc110585553a6b2478a4c6fe89e346bc9527d4
                     <div class="wrapper navbar p-0">
                         <!-- navbar brooke et co -->
                         <h1 class="brookebrand m-0"><span class="align-middle">brooke & co.</span></h1>
@@ -275,7 +280,7 @@
                         <div class="wrapper navbar p-0">
                             <!-- navbar brooke et co -->
                             <div class="navbar navbar-expand-lg navbar-dark p-0">
-                                <a class="brookebrand m-0" href="#">brooke & co</a>
+                                <a class="brookebrand m-0" href="/product">brooke & co</a>
                                 <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 236.36" style="fill:#434E5E" width="1.6em" height="1.6em">
                                     <path d="M119,67.11A33.15,33.15,0,1,1,152.14,34,33.14,33.14,0,0,1,119,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
                                         <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
@@ -382,24 +387,25 @@
 
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Books</a>
+
+                                    <a class="dropdown-item" href="/cattegoryBooks">Books</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Films</a>
+                                    <a class="dropdown-item" href="/cattegoryFilms">Films</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Video Games</a>
+                                    <a class="dropdown-item" href="/cattegoryVgames">Video Games</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </li>
                             <!-- Navbar Items -->
                             <li class="nav-item pl-5 pr-5">
-                                <a class="nav-link" href="#">books</a>
+                                <a class="nav-link" href="/cattegoryBooks">books</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-5 pr-5" href="#">films</a>
+                                <a class="nav-link pl-5 pr-5" href="/cattegoryFilms">films</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-5 pr-5" href="#">video games</a>
+                                <a class="nav-link pl-5 pr-5" href="/cattegoryVgames">video games</a>
                             </li>
                         </ul>
                     </div>

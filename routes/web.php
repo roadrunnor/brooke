@@ -12,11 +12,10 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\RegisterController;
-/* Route::get('user',[UserController::class,'index'])->name('user.index'); */
-
-/* -- Ricardo Login-- */
 
 
+
+<<<<<<< HEAD
 /* Route::get('/',[UserController::class,'login'])->name('user.index'); */
 // Route::get('/',[LoginController::class,'index']);
 
@@ -49,6 +48,8 @@ Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('po
  */
 Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 // Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
+=======
+>>>>>>> b5cc110585553a6b2478a4c6fe89e346bc9527d4
 
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
@@ -58,8 +59,14 @@ Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('de
 
 //-----------Fin de routage panier--------------
 
+//---------Routage Products--------------------
+Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
-
+Route::get('/cattegoryBooks', [ProductController::class, 'cattegoryBooks']);
+Route::get('/cattegoryFilms', [ProductController::class, 'cattegoryFilms']);
+Route::get('/cattegoryVgames', [ProductController::class, 'cattegoryVgames']);
+// Route::get('/categoryBooks/subCinemaBook', [ProductController::class,'subCinemaBook'])->nsme('category.subCinemaBook');
+//-----------Fin de routage products--------------
 
 Auth::routes();
 
@@ -67,3 +74,6 @@ Route::get('/',[LoginController::class,'index'])->name('login.index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+
+

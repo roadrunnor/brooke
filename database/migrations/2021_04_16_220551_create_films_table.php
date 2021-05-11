@@ -65,6 +65,104 @@ class CreateFilmsTable extends Migration
             'film_actors'=>'Sylvain'
             
         ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-027',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-028',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-029',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-030',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-031',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-032',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-033',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-034',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-035',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-036',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-037',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-038',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-039',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
+        DB::table('films')->insert([
+            'product_id'=>'pr-040',
+            'film_duration'=>'2:55',
+            'film_recommanded_for_age'=>'18+',
+            'film_actors'=>'Sylvain'
+            
+        ]);
     }
 
     /**

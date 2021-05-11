@@ -120,7 +120,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'David R. Brooks',
             'book_editor' => 'Springer',
             'book_collection' => '2',
-            'book_Link' =>'sub-001'
+            'book_Link' =>'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -131,7 +131,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Azat Mardan',
             'book_editor' => 'APress',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -142,7 +142,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Jennifer Niederst Robbins',
             'book_editor' => "O'Reilly",
             'book_collection' => '2',
-            'book_Link' =>'sub-001'
+            'book_Link' =>'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -153,7 +153,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Kirupa Chinnathambi',
             'book_editor' => 'Kindle Edition',
             'book_collection' => '2',
-            'book_Link' =>'sub-001'
+            'book_Link' =>'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -164,7 +164,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Joe Morgan',
             'book_editor' => 'The Pragmatic Programmers',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -175,7 +175,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Sheela Preuitt',
             'book_editor' => 'Lerner',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -186,7 +186,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Jeremy Keith',
             'book_editor' => 'A Book Apart',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Linke.com'
 
         ]);
         DB::table('books')->insert([
@@ -197,7 +197,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Bruce Lawson, Remy Sharp',
             'book_editor' => 'Pearson Education',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Link.com'
 
         ]);
         DB::table('books')->insert([
@@ -208,7 +208,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Darren Jones',
             'book_editor' => 'Sitepoint',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Link.com'
 
         ]);
         DB::table('books')->insert([
@@ -219,7 +219,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Laura Lemay, Rafe Colbum, Jennifer Kyrmin',
             'book_editor' => 'Sams',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Link.com'
 
         ]);
         DB::table('books')->insert([
@@ -230,7 +230,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'Group Author: M. Park, M. Zburlea',
             'book_editor' => 'A Book Apart',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Link.com'
 
         ]);
         DB::table('books')->insert([
@@ -241,7 +241,7 @@ class CreateBooksTable extends Migration
             'book_author' => 'M. Gans, T. Hodge, G. Wilson',
             'book_editor' => 'A Chapman & Hall Book',
             'book_collection' => '2',
-            'book_Link' => 'sub-001'
+            'book_Link' => 'Link.com'
 
         ]);
        
