@@ -19,7 +19,15 @@ class Book extends Model
         'book_link',
     ];
       protected $table = "books";
+      protected $primaryKey = 'product_id';
+      public $incrementing = false;
+      protected $keyType = 'string';
+
       public function product(){
-          return $this->belongsTo('App\Models\Product');
+
+      return $this->belongsTo(Product::class, 'product_id', 'product_id');
+        // return $this->hasOneThrough(App\Product::class, App\Film::class, App\VideoGame::class);
+
       }
+     
 }

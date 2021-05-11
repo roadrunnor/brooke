@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Product extends Model
 {
     use HasFactory;
+    protected $table = 'products';
     public $fillable =[
         'product_id',
         'product_name',
@@ -19,13 +19,26 @@ class Product extends Model
         'product_image',
         'sub_category_id',
     ];
+    protected $primaryKey = 'product_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
     public function book(){
-        return $this->HasOne('App\Models\Book');
+        return $this->hasOne(Book::class, 'product_id', 'product_id');
     }
     public function film(){
-        return $this->HasOne('App\Models\Film');
+        return $this->hasOne(Film::class, 'product_id', 'product_id');
     }
     public function videoGame(){
-        return $this->HasOne('App\Models\VideoGame');
+        return $this->hasOne(VideoGame::class, 'product_id', 'product_id');
     }
+    public function subCategoryToProduct() {
+    return $this->belongsTo(SubCategory::class, 'sub_category_id', 'product_id');   
+    }
+
+
+    //------------Partie panier------------
+    public function commandLines(){
+        return $this->hasMany(CommandLine::class);
+    }
+    //------------Fin de Partie panier------------
 }

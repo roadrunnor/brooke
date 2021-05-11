@@ -17,9 +17,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'id',
         'name',
         'email',
+        'email_verified_at',
         'password',
+        'remember_token',
+        'created_at',
+        'email_verified_at',
+        'updated_at'
     ];
 
     /**
@@ -40,4 +46,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    //------------Partie panier------------
+    public function carts(){
+        return $this->hasMany(Cart::class);
+    }
+    //---------Fin de partie panier----------
+
 }
