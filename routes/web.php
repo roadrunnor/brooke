@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\LoginController as AuthLoginController;
+
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\LoginController;
@@ -27,10 +27,7 @@ Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit
  Route::get('/',[UserController::class,'loginSubmit']); */
 /* ----------------- */
 
-
-<<<<<<< HEAD
 /* Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
-=======
 Route::get('/', [ProductController::class,'index'])->name('product.index');
 
 //Route::get('/', function () {return view('header');})->name('post.header');
@@ -40,22 +37,18 @@ Route::get('/', function () {return view('header');})->name('header.index');
 
 Route::get('user',[UserController::class,'index'])->name('user.index');
 Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
->>>>>>> 17cd1595a86c4f691da2d0957b2ffeb593104602
+
 Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
 Route::get('/add-post',[clientController::class,'addPost'])->name('posts.addPost');
 Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-update');
 Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete'); */
 
-<<<<<<< HEAD
-Route::get('/',[LoginController::class,'index'])->name('login.index');
-Route::post('/',[LoginController::class,'loginSubmit'])->name('login.submit');
+// Route::get('/',[LoginController::class,'index'])->name('login.index');
+// Route::post('/',[LoginController::class,'loginSubmit'])->name('login.submit');
 /* Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
  */
 Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
-=======
-Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
-
->>>>>>> 17cd1595a86c4f691da2d0957b2ffeb593104602
+// Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
@@ -70,6 +63,7 @@ Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
 
 Auth::routes();
 
+Route::get('/',[LoginController::class,'index'])->name('login.index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
