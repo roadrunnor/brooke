@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 
 // Route::get('/', function () {return view('header');})->name('header.index');
-Route::get('/', [ProductController::class,'index'])->name('product.index');
+//Route::get('/', [ProductController::class,'index'])->name('product.index');
 
 Route::get('user',[UserController::class,'index'])->name('user.index');
 Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
