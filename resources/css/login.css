@@ -1,0 +1,15 @@
+
+body{
+    background:#e4dcde;
+   
+}
+.imaLog{
+    width: 66%;
+    background-image: url(logo_film.svg);
+    background-size: cover;
+    height: 0;
+    padding: 0; /* reset */
+    padding-bottom: calc(65.9% * 3 / 3);
+
+
+}

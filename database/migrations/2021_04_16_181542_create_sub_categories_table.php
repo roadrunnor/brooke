@@ -88,6 +88,13 @@ class CreateSubCategoriesTable extends Migration
             'sub_category_name' => 'Comedy ',
             'category_id' => 'cat-002'
         ]);
+
+        /* Deram */
+        DB::table('sub_categories')->insert([
+            'sub_category_id' => 'sub-010',
+            'sub_category_name' => 'Deram ',
+            'category_id' => 'cat-002'
+        ]);
         
         /* Video Games */
 

@@ -40,6 +40,86 @@ class CreateVideoGamesTable extends Migration
             'game_consoles'=>'Xbox',
                       
         ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-045',
+            'game_consoles'=>'PS4',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-046',
+            'game_consoles'=>'XBox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-047',
+            'game_consoles'=>'Nintendo',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-048',
+            'game_consoles'=>'Xbox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-049',
+            'game_consoles'=>'PS4',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-050',
+            'game_consoles'=>'XBox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-051',
+            'game_consoles'=>'Nintendo',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-052',
+            'game_consoles'=>'Xbox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-053',
+            'game_consoles'=>'PS4',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-054',
+            'game_consoles'=>'XBox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-055',
+            'game_consoles'=>'Nintendo',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-056',
+            'game_consoles'=>'Xbox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-057',
+            'game_consoles'=>'PS4',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-058',
+            'game_consoles'=>'XBox',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-059',
+            'game_consoles'=>'Nintendo',
+                      
+        ]);
+        DB::table('video_games')->insert([
+            'product_id'=>'pr-060',
+            'game_consoles'=>'Xbox',
+                      
+        ]);
     }
 
     /**

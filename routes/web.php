@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\Auth\LoginController as AuthLoginController;
 use App\Http\Controllers\clientController;
 use App\Http\Controllers\DetailsController;
 use App\Http\Controllers\LoginController;
@@ -6,19 +8,11 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
+use Illuminate\Auth\Events\Login;
+use Illuminate\Routing\Route as RoutingRoute;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\RegisterController;
 
-// Route::get('/', function () {return view('header');})->name('header.index');
-//Route::get('/', [ProductController::class,'index'])->name('product.index');
-
-Route::get('user',[UserController::class,'index'])->name('user.index');
-Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
-Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
-Route::get('/add-post',[clientController::class,'addPost'])->name('posts.addPost');
-Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-update');
-Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete');
-Route::get('/login',[LoginController::class,'index'])->name('login.index');
-Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
-Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 
 
 //---------Routage panier--------------------
@@ -31,5 +25,22 @@ Route::get('/passerCommande/{user_id}/{cart_id}',[CartController::class, 'passer
 
 //-----------Fin de routage panier--------------
 
+//---------Routage Products--------------------
+Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
+Route::get('/cattegoryBooks', [ProductController::class, 'cattegoryBooks']);
+Route::get('/cattegoryFilms', [ProductController::class, 'cattegoryFilms']);
+Route::get('/cattegoryVgames', [ProductController::class, 'cattegoryVgames']);
+Route::get('/header',[ProductController::class,'menu'])->name('header');
+
+// Route::get('/categoryBooks/subCinemaBook', [ProductController::class,'subCinemaBook'])->nsme('category.subCinemaBook');
+//-----------Fin de routage products--------------
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+
+
 
