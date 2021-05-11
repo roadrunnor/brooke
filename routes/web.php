@@ -30,13 +30,15 @@ Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
 Route::get('/cattegoryBooks', [ProductController::class, 'cattegoryBooks']);
 Route::get('/cattegoryFilms', [ProductController::class, 'cattegoryFilms']);
 Route::get('/cattegoryVgames', [ProductController::class, 'cattegoryVgames']);
+Route::get('/header',[ProductController::class,'menu'])->name('header');
+
 // Route::get('/categoryBooks/subCinemaBook', [ProductController::class,'subCinemaBook'])->nsme('category.subCinemaBook');
 //-----------Fin de routage products--------------
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 

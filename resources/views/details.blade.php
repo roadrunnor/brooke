@@ -10,7 +10,7 @@
         <div class="container-fluid mt-3 mx-5">
             <div class="row justify-content-between">
                 <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
-                    <svg class="pr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
+                    {{-- <svg class="pr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
                         <g id="Composant_11_1" data-name="Composant 11 – 1" clip-path="url(#clip-path)">
                             <g id="Groupe_de_masques_4" data-name="Groupe de masques 4" transform="translate(-118 -690)" clip-path="url(#clip-path-2)">
                                 <g id="rocket" transform="translate(118 690)">
@@ -27,8 +27,8 @@
                                 </g>
                             </g>
                         </g>
-                    </svg>
-                    <div class="vertical-text">
+                    </svg> --}}
+                    {{-- <div class="vertical-text">
                         <span class="font-weight-bold">Free Shipping</span>
                         <span>Free Shipping All Order</span>
                     </div>
@@ -47,10 +47,10 @@
                     </svg>
                     <div class="vertical-text">
                         <span class="font-weight-bold">100% Money Guarantee</span>
-                        <span>30 days money back</span>
+                        <span>30 days money back 33</span>
                     </div>
-                </a>
-                <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
+                </a> --}}
+                {{-- <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
                     <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
                         <g id="Composant_9_1" data-name="Composant 9 – 1" clip-path="url(#clip-path)">
                             <g id="Groupe_de_masques_2" data-name="Groupe de masques 2" transform="translate(-718 -690)" clip-path="url(#clip-path-2)">
@@ -70,7 +70,7 @@
                     <div class="vertical-text">
                         <span class="font-weight-bold">Help Center</span>
                         <span>24/7 Support System</span>
-                    </div>
+                    </div> --}}
                 </a>
                 <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
                     <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">

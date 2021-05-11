@@ -11,14 +11,12 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-    public function index()
-    {
-    }
    
     public function getProducts()
     {
      // $titles = DB::table('users')->pluck('title');
       $category = Category::pluck('category_id');
+      // $categoryName = Category::pluck('category_name');
        $i = 1;
       foreach ($category as $bigCat) {
         $subCatId[$i++] = SubCategory::get()->where('category_id', $bigCat)->pluck('sub_category_id');
@@ -27,8 +25,14 @@ class ProductController extends Controller
       $subCatIdFilm = Product::whereIn('sub_category_id', $subCatId[2])->get();
       $subCatIdVideoGame = Product::whereIn('sub_category_id', $subCatId[3])->get();
       return view('products', ['subCatIdBook'=>$subCatIdBook, 'subCatIdFilm'=>$subCatIdFilm, 'subCatIdVideoGame'=>$subCatIdVideoGame]);
+      
     }
-
+public function menu(){
+    $categoryName = Category::pluck('category_name');
+   
+  return view('header' ,['categoryName'=>$categoryName]);
+  
+}
     //detail du produit par son id
     public function getDetail($id)
     {
@@ -76,6 +80,16 @@ class ProductController extends Controller
       return view('cattegoryVgames', ['catVgames'=>$catVgames, 'subCategory'=>$subCategory]);
 
       // return $catBooks;
+          //$categoryId = Category::pluck('category_id');
+    // $i = 1;
+    // foreach ($categoryId as  $cat) {
+    //   $subCatsId[$i++] = SubCategory::where('category_id','$cat')->pluck('sub_category_id');
+    //   $j=1;
+    //   foreach ($ $subCatsId[$i] as $subId) {
+    //     $subCat[$j++] = Product::where('sub_category_id',$subId)->get();
+        
+    //   }
+    // }
 
     }
 

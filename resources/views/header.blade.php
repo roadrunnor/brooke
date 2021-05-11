@@ -382,7 +382,10 @@
 
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
+                                    {{-- @foreach ($categoryName as $Cat)
+                                        
+                                    @endforeach --}}
+                                  
                                     <a class="dropdown-item" href="/cattegoryBooks">Books</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="/cattegoryFilms">Films</a>
