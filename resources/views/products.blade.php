@@ -3,10 +3,7 @@
 <div id="zoneCarousel" class="container-fluid">
     <img id="idImage" src="" />
 </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> b5cc110585553a6b2478a4c6fe89e346bc9527d4
 <!-- Banner Section -->
 <div class="wrapper">
     <section id="zonePub">
