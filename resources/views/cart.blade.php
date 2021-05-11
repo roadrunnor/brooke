@@ -82,7 +82,7 @@ use App\Http\Controllers\CartController;
                     <th>{{ $totalQuantity }}</th>
                     <th>Total: {{$totalPrix}}</th>
                     <th><a href="destroyCart/{{ $carts[0]->id }}">Vider Panier</a></th>
-                    <th> <a href="">PayPal</a> </th>
+                    <th> <a href="passerCommande/{{$carts[0]->user_id}}/{{$carts[0]->id}}">passer commande</a> </th>
                 </tr>
             </tbody>
             @endif
