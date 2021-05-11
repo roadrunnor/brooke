@@ -221,13 +221,8 @@
                         </ul>
                     </div>
                 </nav>
-<<<<<<< HEAD
-                    <!-- navbar brooke & co -->
-                    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
-=======
                 <!-- navbar brooke & co -->
                 {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
->>>>>>> b5cc110585553a6b2478a4c6fe89e346bc9527d4
                     <div class="wrapper navbar p-0">
                         <!-- navbar brooke et co -->
                         <h1 class="brookebrand m-0"><span class="align-middle">brooke & co.</span></h1>
@@ -387,7 +382,10 @@
 
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
+                                    {{-- @foreach ($categoryName as $Cat)
+                                        
+                                    @endforeach --}}
+                                  
                                     <a class="dropdown-item" href="/cattegoryBooks">Books</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="/cattegoryFilms">Films</a>

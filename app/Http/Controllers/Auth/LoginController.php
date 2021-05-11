@@ -25,20 +25,12 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    public function index()
-    {
-        
-        return view('login.index');
-    }
-
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
-
-    
 
     /**
      * Create a new controller instance.
