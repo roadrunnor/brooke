@@ -1,8 +1,14 @@
 /*
     |-----------------------------------------------------|
-    | General Laravel 8
+    | General 
     |-----------------------------------------------------|
 */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Roboto', Helvetica;
@@ -11,24 +17,6 @@ body {
     text-align: left;
     color: #434E5E;
     background: #e9e9e9;
-}
-
-.laboratoire {
-    padding-top: 3em;
-    margin: auto;
-    max-width: 600px;
-}
-
-
-p {
-    line-height: 1.6;
-}
-
-article+article {
-    margin-top: 3em;
-    padding-top: 3em;
-    border-top: 1px solid #434E5E;
-
 }
 
 
@@ -399,20 +387,60 @@ li.s-p-items.m-0.list-group-item {
     color: #f1f1f1;
 }
 
-
 /*
     |-----------------------------------------------------|
-    | products section
+    | products card 
     |-----------------------------------------------------|
 */
 
-.card-size {
-    height: 25em;
-    width: 15em;
-    font-size: .78rem;
-    padding: 1.4em;
-    margin: 1.15em 0 0 0;
+.card {
+    max-height: max-content;
+    transition: transform 200ms ease;
+    overflow: hidden;
 }
+
+.card-content {
+    width: 15em;
+    height: 25em;
+    font-size: .75rem;
+    padding: 1.4em;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    box-shadow: 0em .1em .52em gray;
+    z-index: 10000;
+}
+
+.card-btn-out a {
+    text-decoration: none;
+    color: #FF1744;
+    font-size: .55rem;
+    padding: .35em .75em;
+    background-color: none;
+    border: #FF1744 1px solid;
+    border-radius: .5em;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.card-btn-out a:hover{
+    color: white;
+    background-color: #FF1744;
+}
+
+.card-btn-out{
+    transform: translateY(145%);
+    transition: transform 300ms ease-in-out;
+}
+
+.card:hover .card-btn-out{
+    font-size: small;
+    line-height: normal;
+    transform: translateY(0);
+}
+
+
 
 /*
     |-----------------------------------------------------|

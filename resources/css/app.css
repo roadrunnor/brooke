@@ -1,8 +1,10 @@
 /*
       |-----------------------------------------------------|
-      | Laboratoires Laravel 8
+      | General CSS
       |-----------------------------------------------------|
 */
+
+
 
 body {
     font-family: 'Roboto', Helvetica;
@@ -18,7 +20,6 @@ body {
     margin: auto;
     max-width: 600px;
 }
-
 
 p {
     line-height: 1.6;
@@ -224,6 +225,8 @@ ul.navbar-nav.ml-auto {
       | products section
       |-----------------------------------------------------|
 */
+
+
 
 
 /*
