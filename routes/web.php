@@ -15,41 +15,6 @@ use App\Http\Controllers\Auth\RegisterController;
 
 
 
-<<<<<<< HEAD
-/* Route::get('/',[UserController::class,'login'])->name('user.index'); */
-// Route::get('/',[LoginController::class,'index']);
-
-/*Route::post('/user',[UserController::class,'login'])->name('user.login');
-Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
- Route::get('/login',[LoginController::class,'index'])->name('login.index');
-Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit'); 
- Route::get('/',[UserController::class,'loginSubmit']); */
-/* ----------------- */
-
-/* Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
-Route::get('/', [ProductController::class,'index'])->name('product.index');
-
-//Route::get('/', function () {return view('header');})->name('post.header');
-//Route::get('/',[HeaderControler::class,'headerProduct'])->name('header.headerProduct');
-
-Route::get('/', function () {return view('header');})->name('header.index');
-
-Route::get('user',[UserController::class,'index'])->name('user.index');
-Route::get('/posts',[clientController::class,'getAllPost'])->name('posts.getallposts');
-
-Route::get('/posts/{id}',[clientController::class,'getPostById'])->name('posts.getPostById');
-Route::get('/add-post',[clientController::class,'addPost'])->name('posts.addPost');
-Route::get('/update-post', [clientController::class,'updatePost'])->name('posts-update');
-Route::get('/delete-post/{id}',[clientController::class,'deletePost'])->name('post.delete'); */
-
-// Route::get('/',[LoginController::class,'index'])->name('login.index');
-// Route::post('/',[LoginController::class,'loginSubmit'])->name('login.submit');
-/* Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
- */
-Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
-// Route::get('/',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
-=======
->>>>>>> b5cc110585553a6b2478a4c6fe89e346bc9527d4
 
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
@@ -72,7 +37,7 @@ Auth::routes();
 
 Route::get('/',[LoginController::class,'index'])->name('login.index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 
 
