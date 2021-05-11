@@ -97,20 +97,24 @@ class CreateSubCategoriesTable extends Migration
         ]);
         
         /* Video Games */
-
+        /* Sub-category-PS4 */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-011',
             'sub_category_name' => 'Play station',
             'category_id' => 'cat-003'
         ]);
+
+        /* Sub-category-WII */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-012',
-            'sub_category_name' => 'XBox',
+            'sub_category_name' => 'Nintendo',
             'category_id' => 'cat-003'
         ]);
+
+        /* Sub-category-XBOX */
         DB::table('sub_categories')->insert([
             'sub_category_id' => 'sub-013',
-            'sub_category_name' => 'Nintendo',
+            'sub_category_name' => 'XBOX',
             'category_id' => 'cat-003'
         ]);
     }

@@ -1,5 +1,4 @@
-
-@include('header') 
+@include('header')
 <div id="zoneCarousel" class="container-fluid">
     <img id="idImage" src="" />
 </div>
@@ -93,7 +92,6 @@
         </div>
     </section>
 </div>
-
 <!-- Selected Product Section -->
 <div class="wrapper">
     <section>
@@ -114,8 +112,10 @@
     </section>
 </div>
 
+
 <!-- Book Section -->
 <div class="wrapper">
+    <!-- Feature Book Section -->
     <section>
         <h3 class="font-weight-bold mt-5 mb-4">Featured Book Products</h3>
         <nav class="selected-products">
@@ -136,13 +136,17 @@
         <div class="container-fluid mt-3 mb-3">
         </div>
     </section>
-
 </div>
+<!-- Book Section ForEach -->
 <div class="container-fluid wrapper">
     <div class="section products">
-        <div class="row wrapper">
-            @foreach ($response as $product)
-            <div class="mr-lg-3">
+        <div class="row wrapper" {{$i=0}}>
+            @foreach ($subCatIdBook as $product)
+            <div class="mr-lg-3" {{$i++}}>
+                @if ($i > 12)
+                {{-- @continue --}}
+                @break;
+                @endif
                 @csrf
                 <div class="card mb-3">
                     <div class="card-content">
@@ -166,7 +170,6 @@
                         </p>
                         <div class="card-btn-out">
                             <a class="card-btn" href="#">Add to Cart</a>
-                            
                         </div>
                     </div>
                 </div>
@@ -175,8 +178,7 @@
         </div>
     </div>
 </div>
-
-<!-- Showmore Section -->
+<!-- Book Showmore Section -->
 <div class="wrapper">
     <section id="showMore" class="my-4">
         <div class="container-fluid mt-3">
@@ -224,6 +226,7 @@
         </div>
     </section>
 </div>
+
 
 <!-- Film Section -->
 <div class="wrapper">
@@ -248,44 +251,48 @@
         </div>
     </section>
 </div>
+<!-- Film Section ForEach -->
 <div class="container-fluid wrapper">
     <div class="section products">
         <div class="row wrapper" {{$i=0}}>
             @foreach ($subCatIdFilm as $product)
-            <div class="mr-lg-auto" {{$i++}}>
+            <div class="mr-lg-3" {{$i++}}>
                 @if ($i > 12)
                 {{-- @continue --}}
                 @break;
-              @endif
+                @endif
                 @csrf
-                <div class="card card-size">
-                    < <a class="navbar-brand" href="details/{{$product['product_id']}}">
-                        {{-- <img src="{{ asset('images/books/') }}"> --}}
-                        <img class="card-img-top" alt="Card image cap" src="{{ asset('images/films/'.$product->product_image) }}">
-                    </a>
-                    <p class="m-0 mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="15" viewBox="0 0 78 11.497">
-                            <g id="Groupe_313" data-name="Groupe 313" transform="translate(-116 -1824)">
-                                <path id="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(116.001 1822.953)" fill="#ff1744" />
-                                <path id="star-2" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(150.001 1822.953)" fill="#ff1744" />
-                                <path id="star-3" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(133.001 1822.953)" fill="#ff1744" />
-                                <path id="star-4" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(167.001 1822.953)" fill="#ff1744" />
-                                <path id="star-5" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(182.001 1822.953)" fill="#e2e2e2" />
-                            </g>
-                        </svg>
-                    </p>
-                    <p class="m-0 pt-1">{{$product->product_name}}</p>
-                    <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
-                    </p>
-                    <!-- <input type="button" value="Add to cart"> -->
+                <div class="card mb-3">
+                    <div class="card-content">
+                        <a class="card-img" href="{{ url('/details')}}">
+                            {{-- <img src="{{ asset('images/films/') }}"> --}}
+                            <img class="card-img-top" alt="Card image cap" src="{{ asset('images/films/'.$product->product_image) }}">
+                        </a>
+                        <p class="card-stars m-0 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="10" viewBox="0 0 78 11.497">
+                                <g id="Groupe_313" data-name="Groupe 313" transform="translate(-116 -1824)">
+                                    <path id="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(116.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-2" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(150.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-3" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(133.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-4" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(167.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-5" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(182.001 1822.953)" fill="#e2e2e2" />
+                                </g>
+                            </svg>
+                        </p>
+                        <p class="card-title m-0">{{$product->product_name}}</p>
+                        <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
+                        </p>
+                        <div class="card-btn-out">
+                            <a class="card-btn" href="#">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
 </div>
-
-<!-- Showmore Section -->
+<!-- Film Showmore Section -->
 <div class="wrapper">
     <section id="showMore" class="my-4">
         <div class="container-fluid mt-3">
@@ -333,6 +340,7 @@
         </div>
     </section>
 </div>
+
 
 <!-- VGames Section -->
 <div class="wrapper">
@@ -340,61 +348,57 @@
         <h3 class="font-weight-bold mt-5 mb-4">Featured Video Game Products</h3>
         <nav class="selected-products">
             <ul class="selected-products-items px-0">
-                <li class="s-p-items m-0">Cinema</li>
-                <li class="s-p-items m-0 active">Geography</li>
-                <li class="s-p-items m-0">Art History</li>
-                <li class="s-p-items m-0">Gamers</li>
-                <li class="s-p-items m-0">Philosophy</li>
-                <li class="s-p-items m-0">Humanities</li>
-                <li class="s-p-items m-0">Mathematic</li>
-                <li class="s-p-items m-0">Sports</li>
-                <li class="s-p-items m-0">Nature</li>
-                <li class="s-p-items m-0">Living Styles</li>
-                <li class="s-p-items m-0">Other</li>
+                <li class="s-p-items m-0 active">Play Station 4</li>
+                <li class="s-p-items m-0">Nintendo Wii</li>
+                <li class="s-p-items m-0">Microsoft XBOX</li>
             </ul>
         </nav>
         <div class="container-fluid mt-3 mb-3">
         </div>
     </section>
 </div>
+<!-- VGames Section ForEach -->
 <div class="container-fluid wrapper">
     <div class="section products">
         <div class="row wrapper" {{$i=0}}>
             @foreach ($subCatIdVideoGame as $product)
-              <div class="mr-lg-auto" {{$i++}}>
-                  @if ($i > 12)
-                  {{-- @continue --}}
-                  @break;
+            <div class="mr-lg-3" {{$i++}}>
+                @if ($i > 12)
+                {{-- @continue --}}
+                @break;
                 @endif
                 @csrf
-                <div class="card card-size">
-                                     < <a class="navbar-brand" href="details/{{$product['product_id']}}">
-                        {{-- <img src="{{ asset('images/books/') }}"> --}}
-                        <img class="card-img-top" alt="Card image cap" src="{{ asset('images/vgames/'.$product->product_image) }}">
-                    </a>
-                    <p class="m-0 mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="15" viewBox="0 0 78 11.497">
-                            <g id="Groupe_313" data-name="Groupe 313" transform="translate(-116 -1824)">
-                                <path id="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(116.001 1822.953)" fill="#ff1744" />
-                                <path id="star-2" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(150.001 1822.953)" fill="#ff1744" />
-                                <path id="star-3" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(133.001 1822.953)" fill="#ff1744" />
-                                <path id="star-4" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(167.001 1822.953)" fill="#ff1744" />
-                                <path id="star-5" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(182.001 1822.953)" fill="#e2e2e2" />
-                            </g>
-                        </svg>
-                    </p>
-                    <p class="m-0 pt-1">{{$product->product_name}}</p>
-                    <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
-                    </p>
-                    <!-- <input type="button" value="Add to cart"> -->
+                <div class="card mb-3">
+                    <div class="card-content">
+                        <a class="card-img" href="{{ url('/details')}}">
+                            {{-- <img src="{{ asset('images/vgames/PS4/') }}"> --}}
+                            <img class="card-img-top" alt="Card image cap" src="{{ asset('images/vgames/PS4/'.$product->product_image) }}">
+                        </a>
+                        <p class="card-stars m-0 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="10" viewBox="0 0 78 11.497">
+                                <g id="Groupe_313" data-name="Groupe 313" transform="translate(-116 -1824)">
+                                    <path id="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(116.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-2" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(150.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-3" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(133.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-4" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(167.001 1822.953)" fill="#ff1744" />
+                                    <path id="star-5" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(182.001 1822.953)" fill="#e2e2e2" />
+                                </g>
+                            </svg>
+                        </p>
+                        <p class="card-title m-0">{{$product->product_name}}</p>
+                        <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
+                        </p>
+                        <div class="card-btn-out">
+                            <a class="card-btn" href="#">Add to Cart</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
 </div>
-
-<!-- Showmore Section -->
+<!-- VGames Showmore Section -->
 <div class="wrapper">
     <section id="showMore" class="my-4">
         <div class="container-fluid mt-3">
@@ -443,7 +447,8 @@
     </section>
 </div>
 
-<!-- Latest Films Section -->
+
+<!-- 2 Latest Films Section -->
 <div class="wrapper">
     <section class="mb-5">
         <h3 class="font-weight-bold mt-5 mb-4">Latest Films</h3>
@@ -543,13 +548,11 @@
         }
     }
 </script>
+</div>
 
-      
-
-</body>
 </html>
 
-  {{-- <a class="navbar-brand" href="{{ url('details/'.$product->product_id)}}"> --}}
-                          
-                                                        
-                            {{-- <a class="btn btn-success" href="{{route('cart.addProduct')}}"> --}}
+{{-- <a class="navbar-brand" href="{{ url('details/'.$product->product_id)}}"> --}}
+
+
+{{-- <a class="btn btn-success" href="{{route('cart.addProduct')}}"> --}}
