@@ -1366,7 +1366,7 @@ body{
 					</div>	
 	</div>
 
-	
+
 @include('footer')
 	
 

@@ -330,7 +330,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item ml-lg-auto">
-                                        <a class="nav-link text-white" href="#">
+                                        <a class="nav-link text-white" href="{{route('cart.show')}}">
                                             <span class="list-item pr-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                                                     <g id="shopping-cart" clip-path="url(#clip-path)">
@@ -382,7 +382,10 @@
 
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
+                                    {{-- @foreach ($categoryName as $Cat)
+                                        
+                                    @endforeach --}}
+                                  
                                     <a class="dropdown-item" href="/cattegoryBooks">Books</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="/cattegoryFilms">Films</a>
