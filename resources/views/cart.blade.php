@@ -16,8 +16,10 @@
     <?php
 // {{ $commandLine->product->product_image }}
         use App\Models\Product;
+use Symfony\Component\Console\Input\Input;
 
-        use function GuzzleHttp\Promise\all;
+use function GuzzleHttp\Promise\all;
+use App\Http\Controllers\CartController;
 
     ?>
     <div class="table-responsive">          
@@ -36,7 +38,7 @@
             </thead>
             <tbody>
             <?php $totalQuantity = 0; $i = 1; $saved = 0; $totalPrix = 0;?>
-            @if($carts)            
+            @if($carts != null)            
             @foreach($carts[0]->commandLines()->get() as  $commandLine)
                 <tr>
                     <td> {{$i++}} </td>
@@ -44,7 +46,20 @@
                     <td>{{ $commandLine->product->product_name }}</td>  
                     <td>{{ $commandLine->product->product_price }}</td> 
                     <td>{{ $commandLine->product->product_promotion_price }}</td> 
-                    <td>{{ $commandLine->quantity }} <?php $totalQuantity += $commandLine->quantity ; ?></td>
+                    <td>
+                   
+                    <form role="form" action="{{ route('updateCommandLine.cart') }}" method="POST" name="frmQuat">
+                    {{csrf_field()}}
+                   
+                    <input type="number" name="qtn" value="{{ $commandLine->quantity }}" onchange="this.form.submit()"/>
+                    <input type="hidden" name="id" value=" {{ $commandLine->id }}" />
+
+                    </form>
+                    <!-- <?php 
+                            // echo $_GET['frmQuat'];
+                            // $totalQuantity += $commandLine->quantity ; 
+                    ?> -->
+                    </td>
                     <td>{{ $commandLine->product->product_promotion_price *  $commandLine->quantity }}</td> 
                     <td>
                         <div>
@@ -56,7 +71,7 @@
                 </tr>
 
             @endforeach               
-            @endif
+          
             
 
                 <tr>
@@ -67,10 +82,10 @@
                     <th>{{ $totalQuantity }}</th>
                     <th>Total: {{$totalPrix}}</th>
                     <th><a href="destroyCart/{{ $carts[0]->id }}">Vider Panier</a></th>
-                    <th> <a href="">PayPal</a> </th>
+                    <th> <a href="passerCommande/{{$carts[0]->user_id}}/{{$carts[0]->id}}">passer commande</a> </th>
                 </tr>
             </tbody>
-            
+            @endif
         </table>
     </div>
   

@@ -15,12 +15,13 @@ use App\Http\Controllers\Auth\RegisterController;
 
 
 
-
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
 Route::get('/addProduct/{product_id}/{user_id}',[CartController::class, 'addProduct'])->name('cart.addProduct');
 Route::get('/destroyCommandLine/{id}',[CartController::class, 'destroy'])->name('destroy.show');
 Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('destroyCart.cart');
+Route::post('/updateCommandLine',[CartController::class, 'updateCommandLine'])->name('updateCommandLine.cart');
+Route::get('/passerCommande/{user_id}/{cart_id}',[CartController::class, 'passerCommande'])->name('passerCommande.cart');
 
 //-----------Fin de routage panier--------------
 
