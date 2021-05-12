@@ -25,11 +25,11 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    public function index()
+  /*   public function index()
     {
         
         return view('login.index');
-    }
+    } */
 
     /**
      * Where to redirect users after login.

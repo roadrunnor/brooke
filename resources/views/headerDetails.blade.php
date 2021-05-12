@@ -15,39 +15,13 @@
 </head>
 <!-- Onload fonctions showCarousel(); chargerZoneItem(); -->
 
-<body onload="javascript:showCarousel();">
+<body>
     <!-- Header -->
     <div class=" header">
         <div class="top-bar theme-bg-primary-darken">
             <div class="container-fluid">
                 <!-- navbar red -->
-                <nav class="navbar navbar-expand-lg navbar-primary position-relative">
-                    <div class="wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 236.36" style="fill:#000" width="100" height="100">
-                            <path d="M119,67.11A33.15,33.15,0,1,1,152.14,34,33.14,33.14,0,0,1,119,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M119,152.14A33.14,33.14,0,1,1,152.14,119,33.13,33.13,0,0,1,119,152.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="300ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M204.36,152.14A33.14,33.14,0,1,1,237.5,119a33.14,33.14,0,0,1-33.14,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="600ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M119,237.18A33.15,33.15,0,1,1,152.14,204,33.14,33.14,0,0,1,119,237.18" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="800ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,237.18A33.15,33.15,0,1,1,66.79,204a33.14,33.14,0,0,1-33.15,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="400ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,67.11A33.15,33.15,0,1,1,66.79,34,33.15,33.15,0,0,1,33.64,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="500ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,152.14A33.14,33.14,0,1,1,66.79,119a33.14,33.14,0,0,1-33.15,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="200ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                        </svg>
-                    </div>
-                </nav>
+                
                 <!-- navbar sticky (navbar black & navbar Brooke & Co.) -->
                 <div id="navbar">
                     <!-- navbar black -->
@@ -221,55 +195,7 @@
                         </ul>
                     </div>
                 </nav>
-                    <!-- navbar brooke & co -->
-                    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
-                    <div class="wrapper navbar p-0">
-                        <!-- navbar brooke et co -->
-                        <h1 class="brookebrand m-0"><span class="align-middle">brooke & co.</span></h1>
-                        <!-- hamburger menu -->
-                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- navbar menu-items and searchbar -->
-                        <div class="collapse navbar-collapse" id="collapsibleNavId">
-                            <!-- searchbar -->
-                            <form class="form-inline ml-5 mr-3 my-2 mt-lg-3">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!-- icons heart and cart -->
-                            <ul class="navbar-nav ml-lg-auto">
-                                <li class="nav-item ml-5">
-                                    <a class="nav-link text-white" href="#">
-                                        <span class="list-item pr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 23">
-                                                <g id="heart" clip-path="url(#clip-path)">
-                                                    <g id="Groupe_20" data-name="Groupe 20">
-                                                        <path id="Tracé_13" data-name="Tracé 13" d="M27.637,41.987a7.952,7.952,0,0,0-5.723-2.315,7.512,7.512,0,0,0-6.877,3.667L15,43.4l-.037-.062a7.512,7.512,0,0,0-6.877-3.667,7.952,7.952,0,0,0-5.723,2.315A8.592,8.592,0,0,0,0,48.184c0,5.285,4.7,8.789,8.843,11.881a29.793,29.793,0,0,1,5.244,4.521,1.172,1.172,0,0,0,1.826,0,17.9,17.9,0,0,1,2.763-2.626,1.172,1.172,0,0,0-1.468-1.827A25.33,25.33,0,0,0,15,62.1a41.389,41.389,0,0,0-4.756-3.91c-3.884-2.9-7.9-5.893-7.9-10,0-3.632,2.361-6.168,5.742-6.168a5.262,5.262,0,0,1,4.825,2.458,6.816,6.816,0,0,1,.921,2.651,1.172,1.172,0,0,0,2.336.005,6.813,6.813,0,0,1,.921-2.656,5.262,5.262,0,0,1,4.825-2.458c3.381,0,5.742,2.537,5.742,6.168,0,3.4-2.769,6.037-5.761,8.38a1.172,1.172,0,1,0,1.445,1.845,24.843,24.843,0,0,0,4.554-4.389A9.517,9.517,0,0,0,30,48.184,8.592,8.592,0,0,0,27.637,41.987Z" transform="translate(0 -39.672)" fill="#363636" />
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        Delivery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="Contact.php">
-                                        <span class="pr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
-                                                <g id="user" clip-path="url(#clip-path)">
-                                                    <g id="user-2" data-name="user" transform="translate(0)" opacity="0.8">
-                                                        <g id="Groupe_7" data-name="Groupe 7" transform="translate(0)">
-                                                            <path id="Tracé_5" data-name="Tracé 5" d="M13.965,12a.547.547,0,0,0-1.071.223.571.571,0,0,1-.116.479.556.556,0,0,1-.437.208H1.66a.556.556,0,0,1-.437-.208.571.571,0,0,1-.116-.479A6.042,6.042,0,0,1,6.855,7.435l.145,0,.146,0A6.016,6.016,0,0,1,12,10.105a.547.547,0,1,0,.908-.609A7.113,7.113,0,0,0,9.227,6.7a3.719,3.719,0,1,0-4.451,0A7.113,7.113,0,0,0,.036,12,1.661,1.661,0,0,0,1.66,14H12.341a1.661,1.661,0,0,0,1.624-2ZM4.375,3.719A2.625,2.625,0,1,1,7.133,6.34H6.868A2.628,2.628,0,0,1,4.375,3.719Z" transform="translate(0)" fill="#fff" />
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        Register or Sign in</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav> --}}
+          
                     <!-- navbar brooke & co -->
                     <nav class="navbar navbar-expand-lg navbar-light pt-3 pb-3 bg-pink">
                         <div class="wrapper navbar p-0">
@@ -425,3 +351,25 @@
             }
         }
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
