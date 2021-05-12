@@ -332,6 +332,7 @@
                                     <li class="nav-item ml-lg-auto">
                                         <a class="nav-link text-white" href="{{route('cart.show')}}">
                                             <span class="list-item pr-2">
+                                            <span style="color: black;" id="nombreDeProduit">{{ $nbArticles }}</span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                                                     <g id="shopping-cart" clip-path="url(#clip-path)">
                                                         <g id="Groupe_19" data-name="Groupe 19">
@@ -341,6 +342,7 @@
                                                 </svg>
                                             </span>
                                         </a>
+                                        
                                     </li>
                                 </ul>
                             </div>

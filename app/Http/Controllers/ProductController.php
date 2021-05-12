@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
@@ -24,7 +25,11 @@ class ProductController extends Controller
       $subCatIdBook = Product::whereIn('sub_category_id', $subCatId[1])->get();
       $subCatIdFilm = Product::whereIn('sub_category_id', $subCatId[2])->get();
       $subCatIdVideoGame = Product::whereIn('sub_category_id', $subCatId[3])->get();
-      return view('products', ['subCatIdBook'=>$subCatIdBook, 'subCatIdFilm'=>$subCatIdFilm, 'subCatIdVideoGame'=>$subCatIdVideoGame]);
+      //-----Partie panier---------
+      $cart = Cart::find(1);
+      $nbArticles = $cart->nbArticles;
+      //-----Fin de partie panier---------
+      return view('products', ['subCatIdBook'=>$subCatIdBook, 'subCatIdFilm'=>$subCatIdFilm, 'subCatIdVideoGame'=>$subCatIdVideoGame, 'nbArticles'=> $nbArticles]);
       
     }
 public function menu(){

@@ -18,7 +18,8 @@ class CreateCartsTable extends Migration
             $table->foreignId('user_id');
             //init == vide, ongoing == en cours et paid == payé
             $table->enum('orderStatus', ['init', 'ongoing', 'paid']);
-            $table->double('total');           
+            $table->double('total'); 
+            $table->integer('nbArticles');           
             $table->timestamps();
         });
     }

@@ -12,12 +12,12 @@ class CartController extends Controller
 {
     public function index(){
 
-        $carts = Cart::where('user_id', 5)->get();
+        $carts = Cart::where('user_id', 1)->get();
         if(count($carts) == 0){
             $cart = new Cart();
             $cart->orderStatus = 'init';
             $cart->total = 0;
-            $cart->user_id = 5;
+            $cart->user_id = 1;
             $cart->save();
         }
         //Si le panier n'est pas vide
@@ -32,7 +32,7 @@ class CartController extends Controller
     //----------------------------------------------------
     public function addProduct($product_id, $user_id){
          //$tabConditions = ['user_id' => 5 ];
-         $user_id = 5;
+         $user_id = 1;
          $carts = Cart::where('user_id', $user_id)->get();
          $product = Product::find($product_id);
          foreach ($carts as $cart) {
@@ -44,9 +44,12 @@ class CartController extends Controller
                     $commandLine->price += $product->product_promotion_price;
                     $commandLine->save();
                     $cart->total += $commandLine->price;
+                    $cart->nbArticles += 1;
                    
                     $cart->save();
-                    return redirect()->route('cart.show');
+                    // return redirect()->route('cart.show');
+                    //return view('products');
+                    return redirect()->route('getAll.getProducts', ['nbArticles' => 5]);
                    }
                  }
                 $commandLine = new CommandLine();
@@ -56,6 +59,7 @@ class CartController extends Controller
                 $commandLine->price = $product->product_promotion_price;
                 $commandLine->save();
                 $cart->total += $commandLine->price;
+                $cart->nbArticles += 1;
                 //$cart->save();
                 if($cart->orderStatus == 'init'){
                     $cart->orderStatus = 'ongoing';
@@ -64,13 +68,16 @@ class CartController extends Controller
                 $cart->save();
             }
          }
-         return redirect()->route('cart.show');
+         //return redirect()->route('cart.show');
+         //return view('products');
+         return redirect()->route('getAll.getProducts', ['nbArticles' => 5]);
     }//Fin de addProduct
     //-----------------------------------------------
     public function destroy($id){
         $commandLine = CommandLine::find($id);
         $cart = Cart::where('id', $commandLine->cart_id)->get();
         $cart[0]->total -= $commandLine->price;
+        $cart[0]->nbArticles -= $commandLine->quantity;
         
         $commandLine->delete();
         $cart[0]->save();
@@ -85,6 +92,7 @@ class CartController extends Controller
             $commandLine->delete();
         }
         $cart->total = 0;
+        $cart->nbArticles = 0;
         $cart->save();
         return redirect()->route('cart.show');
     }
@@ -98,6 +106,9 @@ class CartController extends Controller
         $cart = Cart::where('id', $commandLine->cart_id)->get();
         $ancienneTotalb = $cart[0]->total;
         $ancienneTotalb -= $commandLine->price;
+
+        $ancienneNbArticles = $cart[0]->nbArticles;
+        $ancienneNbArticles -= $commandLine->quantity;
         
         //------------------------
         $commandLine->quantity = $qtn; 
@@ -105,6 +116,7 @@ class CartController extends Controller
         $commandLine->price = $product->product_promotion_price * $qtn;
         $commandLine->save(); 
         $cart[0]->total = $ancienneTotalb + $commandLine->price;  
+        $cart[0]->nbArticles = $ancienneNbArticles + $commandLine->quantity;  
         $cart[0]->save();
         return redirect()->route('cart.show');
     }

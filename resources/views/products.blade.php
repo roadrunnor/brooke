@@ -169,7 +169,7 @@
                         <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
                         </p>
                         <div class="card-btn-out">
-                            <a class="card-btn" href="#">Add to Cart</a>
+                            <a class="card-btn" href="{{route('cart.addProduct', ['product_id' => $product->product_id, 'user_id' => 1])}}">Add to Cart</a>
                         </div>
                     </div>
                 </div>
@@ -227,7 +227,6 @@
     </section>
 </div>
 
-
 <!-- Film Section -->
 <div class="wrapper">
     <section>
@@ -274,7 +273,7 @@
                     <p class="m-0 pt-1">{{$product->product_name}}</p>
                     <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
                     </p>
-                    <a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $product->product_id, 'user_id' => 5])}}">Add to cart</a>
+                    <a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $product->product_id, 'user_id' => 1])}}">Add to cart</a>
                     <!-- <input type="button" value="Add to cart"> -->
                 </div>
             </div>
@@ -377,7 +376,7 @@
                     <p class="m-0 pt-1">{{$product->product_name}}</p>
                     <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
                     </p>
-                    <a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $product->product_id, 'user_id' => 5])}}">Add to cart</a>
+                    <a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $product->product_id, 'user_id' => 1])}}">Add to cart</a>
                     <!-- <input type="button" value="Add to cart"> -->
                 </div>
             </div>
