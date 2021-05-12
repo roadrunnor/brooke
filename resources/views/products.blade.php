@@ -117,7 +117,7 @@
 <div class="wrapper">
     <!-- Feature Book Section -->
     <section>
-        <h3 class="font-weight-bold mt-5 mb-4">Featured Book Products</h3>
+        <h3 class="font-weight-bold mt-5 mb-4">Featured Books</h3>
         <nav class="selected-products">
             <ul class="selected-products-items px-0">
                 <li class="s-p-items m-0">Cinema</li>
@@ -231,20 +231,13 @@
 <!-- Film Section -->
 <div class="wrapper">
     <section>
-        <h3 class="font-weight-bold mt-5 mb-4">Featured Film Products</h3>
+        <h3 class="font-weight-bold mt-5 mb-4">Featured Films - Now Showing</h3>
         <nav class="selected-products">
             <ul class="selected-products-items px-0">
-                <li class="s-p-items m-0">Cinema</li>
-                <li class="s-p-items m-0 active">Geography</li>
-                <li class="s-p-items m-0">Art History</li>
-                <li class="s-p-items m-0">Gamers</li>
-                <li class="s-p-items m-0">Philosophy</li>
-                <li class="s-p-items m-0">Humanities</li>
-                <li class="s-p-items m-0">Mathematic</li>
-                <li class="s-p-items m-0">Sports</li>
-                <li class="s-p-items m-0">Nature</li>
-                <li class="s-p-items m-0">Living Styles</li>
-                <li class="s-p-items m-0">Other</li>
+                <li class="s-p-items m-0 active">Trending</li>
+                <li class="s-p-items m-0">Most Popular</li>
+                <li class="s-p-items m-0">Most Wanted</li>
+                <li class="s-p-items m-0">Most Recent</li>
             </ul>
         </nav>
         <div class="container-fluid mt-3 mb-3">
@@ -283,7 +276,7 @@
                         <p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
                         </p>
                         <div class="card-btn-out">
-                            <a class="card-btn" href="#">Add to Cart</a>
+                            <a class="card-btn" href="#">Watch Now</a>
                         </div>
                     </div>
                 </div>
