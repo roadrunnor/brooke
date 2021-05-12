@@ -15,10 +15,6 @@ use App\Http\Controllers\Auth\RegisterController;
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 2b9e738b28e5b8946778ef9a0138bc918c9ab9f8
 //---------Routage panier--------------------
 Route::get('/cart',[CartController::class, 'index'])->name('cart.show');
 Route::get('/addProduct/{product_id}/{user_id}',[CartController::class, 'addProduct'])->name('cart.addProduct');
@@ -26,7 +22,6 @@ Route::get('/destroyCommandLine/{id}',[CartController::class, 'destroy'])->name(
 Route::get('/destroyCart/{id}',[CartController::class, 'destroyCart'])->name('destroyCart.cart');
 Route::post('/updateCommandLine',[CartController::class, 'updateCommandLine'])->name('updateCommandLine.cart');
 Route::get('/passerCommande/{user_id}/{cart_id}',[CartController::class, 'passerCommande'])->name('passerCommande.cart');
-
 //-----------Fin de routage panier--------------
 
 //---------Routage Products--------------------
@@ -42,10 +37,7 @@ Route::get('/header',[ProductController::class,'menu'])->name('header');
 
 Auth::routes();
 
-<<<<<<< HEAD
 /* Route::get('/',[LoginController::class,'index'])->name('login.index'); */
-=======
->>>>>>> 2b9e738b28e5b8946778ef9a0138bc918c9ab9f8
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
