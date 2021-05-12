@@ -15,39 +15,13 @@
 </head>
 <!-- Onload fonctions showCarousel(); chargerZoneItem(); -->
 
-<body onload="javascript:showCarousel();">
+<body>
     <!-- Header -->
     <div class=" header">
         <div class="top-bar theme-bg-primary-darken">
             <div class="container-fluid">
                 <!-- navbar red -->
-                <nav class="navbar navbar-expand-lg navbar-primary position-relative">
-                    <div class="wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 236.36" style="fill:#000" width="100" height="100">
-                            <path d="M119,67.11A33.15,33.15,0,1,1,152.14,34,33.14,33.14,0,0,1,119,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M119,152.14A33.14,33.14,0,1,1,152.14,119,33.13,33.13,0,0,1,119,152.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="300ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M204.36,152.14A33.14,33.14,0,1,1,237.5,119a33.14,33.14,0,0,1-33.14,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="600ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M119,237.18A33.15,33.15,0,1,1,152.14,204,33.14,33.14,0,0,1,119,237.18" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="800ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,237.18A33.15,33.15,0,1,1,66.79,204a33.14,33.14,0,0,1-33.15,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="400ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,67.11A33.15,33.15,0,1,1,66.79,34,33.15,33.15,0,0,1,33.64,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="500ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,152.14A33.14,33.14,0,1,1,66.79,119a33.14,33.14,0,0,1-33.15,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="200ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                        </svg>
-                    </div>
-                </nav>
+                
                 <!-- navbar sticky (navbar black & navbar Brooke & Co.) -->
                 <div id="navbar">
                     <!-- navbar black -->
@@ -221,55 +195,7 @@
                         </ul>
                     </div>
                 </nav>
-                    <!-- navbar brooke & co -->
-                    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
-                    <div class="wrapper navbar p-0">
-                        <!-- navbar brooke et co -->
-                        <h1 class="brookebrand m-0"><span class="align-middle">brooke & co.</span></h1>
-                        <!-- hamburger menu -->
-                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- navbar menu-items and searchbar -->
-                        <div class="collapse navbar-collapse" id="collapsibleNavId">
-                            <!-- searchbar -->
-                            <form class="form-inline ml-5 mr-3 my-2 mt-lg-3">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!-- icons heart and cart -->
-                            <ul class="navbar-nav ml-lg-auto">
-                                <li class="nav-item ml-5">
-                                    <a class="nav-link text-white" href="#">
-                                        <span class="list-item pr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 23">
-                                                <g id="heart" clip-path="url(#clip-path)">
-                                                    <g id="Groupe_20" data-name="Groupe 20">
-                                                        <path id="Tracé_13" data-name="Tracé 13" d="M27.637,41.987a7.952,7.952,0,0,0-5.723-2.315,7.512,7.512,0,0,0-6.877,3.667L15,43.4l-.037-.062a7.512,7.512,0,0,0-6.877-3.667,7.952,7.952,0,0,0-5.723,2.315A8.592,8.592,0,0,0,0,48.184c0,5.285,4.7,8.789,8.843,11.881a29.793,29.793,0,0,1,5.244,4.521,1.172,1.172,0,0,0,1.826,0,17.9,17.9,0,0,1,2.763-2.626,1.172,1.172,0,0,0-1.468-1.827A25.33,25.33,0,0,0,15,62.1a41.389,41.389,0,0,0-4.756-3.91c-3.884-2.9-7.9-5.893-7.9-10,0-3.632,2.361-6.168,5.742-6.168a5.262,5.262,0,0,1,4.825,2.458,6.816,6.816,0,0,1,.921,2.651,1.172,1.172,0,0,0,2.336.005,6.813,6.813,0,0,1,.921-2.656,5.262,5.262,0,0,1,4.825-2.458c3.381,0,5.742,2.537,5.742,6.168,0,3.4-2.769,6.037-5.761,8.38a1.172,1.172,0,1,0,1.445,1.845,24.843,24.843,0,0,0,4.554-4.389A9.517,9.517,0,0,0,30,48.184,8.592,8.592,0,0,0,27.637,41.987Z" transform="translate(0 -39.672)" fill="#363636" />
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        Delivery</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="Contact.php">
-                                        <span class="pr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
-                                                <g id="user" clip-path="url(#clip-path)">
-                                                    <g id="user-2" data-name="user" transform="translate(0)" opacity="0.8">
-                                                        <g id="Groupe_7" data-name="Groupe 7" transform="translate(0)">
-                                                            <path id="Tracé_5" data-name="Tracé 5" d="M13.965,12a.547.547,0,0,0-1.071.223.571.571,0,0,1-.116.479.556.556,0,0,1-.437.208H1.66a.556.556,0,0,1-.437-.208.571.571,0,0,1-.116-.479A6.042,6.042,0,0,1,6.855,7.435l.145,0,.146,0A6.016,6.016,0,0,1,12,10.105a.547.547,0,1,0,.908-.609A7.113,7.113,0,0,0,9.227,6.7a3.719,3.719,0,1,0-4.451,0A7.113,7.113,0,0,0,.036,12,1.661,1.661,0,0,0,1.66,14H12.341a1.661,1.661,0,0,0,1.624-2ZM4.375,3.719A2.625,2.625,0,1,1,7.133,6.34H6.868A2.628,2.628,0,0,1,4.375,3.719Z" transform="translate(0)" fill="#fff" />
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </svg>
-                                        </span>
-                                        Register or Sign in</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav> --}}
+          
                     <!-- navbar brooke & co -->
                     <nav class="navbar navbar-expand-lg navbar-light pt-3 pb-3 bg-pink">
                         <div class="wrapper navbar p-0">
@@ -330,9 +256,8 @@
                                         </a>
                                     </li>
                                     <li class="nav-item ml-lg-auto">
-                                        <a class="nav-link text-white" href="{{route('cart.show')}}">
+                                        <a class="nav-link text-white" href="#">
                                             <span class="list-item pr-2">
-                                            <span style="color: black;" id="nombreDeProduit">{{ $nbArticles }}</span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                                                     <g id="shopping-cart" clip-path="url(#clip-path)">
                                                         <g id="Groupe_19" data-name="Groupe 19">
@@ -342,7 +267,6 @@
                                                 </svg>
                                             </span>
                                         </a>
-                                        
                                     </li>
                                 </ul>
                             </div>
@@ -384,10 +308,7 @@
 
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    {{-- @foreach ($categoryName as $Cat)
-                                        
-                                    @endforeach --}}
-                                  
+
                                     <a class="dropdown-item" href="/cattegoryBooks">Books</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="/cattegoryFilms">Films</a>
@@ -430,3 +351,232 @@
             }
         }
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="zoneCarousel" class="container-fluid">
+    <img id="idImage" src="" />
+</div>
+
+<!-- Banner Section -->
+<div class="wrapper">
+    <section id="zonePub">
+        <div class="container-fluid mt-3 mx-5">
+            <div class="row justify-content-between">
+                <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
+                    <svg class="pr-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
+                        <g id="Composant_11_1" data-name="Composant 11 – 1" clip-path="url(#clip-path)">
+                            <g id="Groupe_de_masques_4" data-name="Groupe de masques 4" transform="translate(-118 -690)" clip-path="url(#clip-path-2)">
+                                <g id="rocket" transform="translate(118 690)">
+                                    <g id="Groupe_43" data-name="Groupe 43">
+                                        <g id="Groupe_42" data-name="Groupe 42">
+                                            <path id="Tracé_27" data-name="Tracé 27" d="M49.565.435A1.485,1.485,0,0,0,48.43,0a40.157,40.157,0,0,0-9.077,1.9A44.53,44.53,0,0,0,21.567,12.585c-1.409,1.409-2.9,3-4.3,4.631C14.921,16.423,9.184,15.5.708,20.707A1.484,1.484,0,0,0,.9,23.336L10.4,27.4,7.3,30.632a1.484,1.484,0,0,0,.023,2.075l1.1,1.1A8.171,8.171,0,0,0,6.25,35.353c-3.454,3.454-2.695,9.523-2.661,9.78A1.484,1.484,0,0,0,4.865,46.41a14.072,14.072,0,0,0,1.714.094c2.112,0,5.7-.39,8.066-2.754a8.175,8.175,0,0,0,1.542-2.181l1.107,1.107a1.484,1.484,0,0,0,2.075.023L22.605,39.6,26.662,49.1a1.484,1.484,0,0,0,1.256.9c.037,0,.073,0,.109,0a1.485,1.485,0,0,0,1.265-.708c5.2-8.476,4.284-14.211,3.492-16.561,1.631-1.4,3.222-2.886,4.631-4.3A44.531,44.531,0,0,0,48.095,10.648,40.158,40.158,0,0,0,50,1.571,1.486,1.486,0,0,0,49.565.435ZM4.856,21.8a19.034,19.034,0,0,1,8.354-2.235h.033a10.847,10.847,0,0,1,1.967.177,30.947,30.947,0,0,0-3.3,5.073ZM12.547,41.65c-1.663,1.663-4.478,1.9-6.082,1.884-.016-1.6.221-4.419,1.884-6.082A5.842,5.842,0,0,1,10.7,36.084l3.211,3.211A5.841,5.841,0,0,1,12.547,41.65Zm5.82-2.1-7.915-7.915,2.457-2.569,8.027,8.027ZM28.2,45.143l-3.014-7.054a30.943,30.943,0,0,0,5.074-3.3,10.752,10.752,0,0,1,.173,1.732A18.716,18.716,0,0,1,28.2,45.143Zm7.116-18.808c-4.43,4.43-8.971,7.988-11.717,9.223L14.443,26.4c1.235-2.746,4.793-7.287,9.223-11.717A40.74,40.74,0,0,1,37.045,5.9l7.047,7.047A40.43,40.43,0,0,1,35.317,26.335Zm9.9-16.458-5.1-5.1.051-.017a42.481,42.481,0,0,1,6.655-1.585A42.752,42.752,0,0,1,45.215,9.877Z" fill="#ff1744" />
+                                        </g>
+                                    </g>
+                                    <g id="Groupe_45" data-name="Groupe 45">
+                                        <g id="Groupe_44" data-name="Groupe 44">
+                                            <path id="Tracé_28" data-name="Tracé 28" d="M36.661,13.339a5.664,5.664,0,1,0,0,8.01A5.67,5.67,0,0,0,36.661,13.339Zm-2.1,5.911a2.7,2.7,0,1,1,.79-1.906A2.678,2.678,0,0,1,34.562,19.251Z" fill="#ff1744" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="vertical-text">
+                        <span class="font-weight-bold">Free Shipping</span>
+                        <span>Free Shipping All Order</span>
+                    </div>
+                </a>
+                <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
+                    <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
+                        <g id="Composant_10_1" data-name="Composant 10 – 1" clip-path="url(#clip-path)">
+                            <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" transform="translate(-418 -690)" clip-path="url(#clip-path-2)">
+                                <g id="umbrella" transform="translate(418 690)">
+                                    <g id="Groupe_38" data-name="Groupe 38">
+                                        <path id="Tracé_21" data-name="Tracé 21" d="M49.307,22.39a1.953,1.953,0,0,0-3.8.924,20.383,20.383,0,0,1,.416,2.259A23.736,23.736,0,0,0,40.82,25a20.383,20.383,0,0,0-5.639,1.063c-.468-8.734-3.119-14.455-5.429-17.848a20.747,20.747,0,0,1,12.307,7.8,1.953,1.953,0,0,0,3.12-2.35,24.647,24.647,0,0,0-8.706-7.2,25.82,25.82,0,0,0-9.521-2.584V1.953a1.953,1.953,0,0,0-3.906,0V3.88a25.111,25.111,0,0,0-15.7,6.934A23.968,23.968,0,0,0,0,28.223a1.953,1.953,0,0,0,2.73,1.792,17.727,17.727,0,0,1,6.255-1.109,24.389,24.389,0,0,1,6.95,1.7,1.947,1.947,0,0,0,1.5.012l.012,0,.008,0q.074-.031.145-.068a18.245,18.245,0,0,1,5.446-1.518V44.141a1.955,1.955,0,0,1-1.953,1.953,2,2,0,0,1-1.953-2,1.953,1.953,0,0,0-3.906,0,5.859,5.859,0,1,0,11.719.046V29.024a18.267,18.267,0,0,1,5.437,1.513,1.958,1.958,0,0,0,1.7.061,22.515,22.515,0,0,1,6.735-1.691,19.475,19.475,0,0,1,6.492,1.126A1.953,1.953,0,0,0,50,28.223,24.694,24.694,0,0,0,49.307,22.39Zm-34.49,3.7A21.522,21.522,0,0,0,8.984,25a22.6,22.6,0,0,0-4.908.546A20.415,20.415,0,0,1,20.246,8.217C17.935,11.614,15.282,17.341,14.817,26.085ZM25,25a22,22,0,0,0-6.261.947,32.4,32.4,0,0,1,3.685-13.815A19.9,19.9,0,0,1,25,8.463a19.731,19.731,0,0,1,2.45,3.45,32.163,32.163,0,0,1,3.808,14.034A22,22,0,0,0,25,25Z" fill="#ff1744" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="vertical-text">
+                        <span class="font-weight-bold">100% Money Guarantee</span>
+                        <span>30 days money back</span>
+                    </div>
+                </a>
+                <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
+                    <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
+                        <g id="Composant_9_1" data-name="Composant 9 – 1" clip-path="url(#clip-path)">
+                            <g id="Groupe_de_masques_2" data-name="Groupe de masques 2" transform="translate(-718 -690)" clip-path="url(#clip-path-2)">
+                                <g id="_24-hours" data-name="24-hours" transform="translate(718 690)">
+                                    <g id="Groupe_40" data-name="Groupe 40">
+                                        <g id="Groupe_39" data-name="Groupe 39">
+                                            <path id="Tracé_22" data-name="Tracé 22" d="M14.509,28.826a1.953,1.953,0,0,0,1.311,3.4h6.055a1.953,1.953,0,0,0,0-3.906h-1.4c2.853-3.234,3.226-4.828,3.226-5.859a4.888,4.888,0,0,0-4.883-4.883l-.035,0-.035,0a4.888,4.888,0,0,0-4.883,4.883,1.953,1.953,0,0,0,3.906,0,.99.99,0,0,1,.977-.977l.035,0,.035,0a.99.99,0,0,1,.976.956c-.019.1-.26,1.107-2.558,3.641C15.877,27.583,14.522,28.814,14.509,28.826Z" fill="#ff1744" />
+                                            <path id="Tracé_23" data-name="Tracé 23" d="M35.912,43.056A21.054,21.054,0,0,1,25,46.094,1.953,1.953,0,0,0,25,50a24.96,24.96,0,0,0,12.936-3.6,1.953,1.953,0,1,0-2.024-3.341Z" fill="#ff1744" />
+                                            <path id="Tracé_24" data-name="Tracé 24" d="M42.678,7.322A25,25,0,0,0,3.824,38.294a25.089,25.089,0,0,0,7.752,7.8H6.152a1.953,1.953,0,0,0,0,3.906h5.963a6.257,6.257,0,0,0,6.25-6.25V37.988a1.953,1.953,0,0,0-3.906,0v5.288a21.128,21.128,0,1,1,28.058-6.568,1.953,1.953,0,1,0,3.247,2.171A24.938,24.938,0,0,0,42.678,7.322Z" fill="#ff1744" />
+                                            <path id="Tracé_25" data-name="Tracé 25" d="M28.613,17.578a1.953,1.953,0,0,0-1.953,1.953v2.393A5.319,5.319,0,0,0,33.4,27.053v3.22a1.953,1.953,0,0,0,3.906,0V19.531a1.953,1.953,0,0,0-3.906,0v2.393a1.416,1.416,0,0,1-2.832,0V19.531A1.953,1.953,0,0,0,28.613,17.578Z" fill="#ff1744" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="vertical-text">
+                        <span class="font-weight-bold">Help Center</span>
+                        <span>24/7 Support System</span>
+                    </div>
+                </a>
+                <a href="#" class="text-secondary  m-0 d-flex align-items-center w-25 pr-5 py-auto">
+                    <svg class="pr-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="68" viewBox="0 0 50 50">
+                        <g id="Composant_8_1" data-name="Composant 8 – 1" clip-path="url(#clip-path)">
+                            <g id="Groupe_de_masques_3" data-name="Groupe de masques 3" transform="translate(-1018 -690)" clip-path="url(#clip-path-2)">
+                                <g id="credit-card_1_" data-name="credit-card (1)" transform="translate(1018 690)">
+                                    <g id="Groupe_41" data-name="Groupe 41">
+                                        <path id="Tracé_26" data-name="Tracé 26" d="M48.047,27.746A1.953,1.953,0,0,0,50,25.793V14.453a7.821,7.821,0,0,0-7.812-7.812H7.813A7.821,7.821,0,0,0,0,14.453V35.547a7.821,7.821,0,0,0,7.813,7.813H42.188A7.821,7.821,0,0,0,50,35.547a1.953,1.953,0,0,0-3.906,0,3.911,3.911,0,0,1-3.906,3.906H7.813a3.911,3.911,0,0,1-3.906-3.906V20.91H46.094v4.883A1.953,1.953,0,0,0,48.047,27.746ZM3.906,17V14.453a3.911,3.911,0,0,1,3.906-3.906H42.188a3.911,3.911,0,0,1,3.906,3.906V17Z" fill="#ff1744" />
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="vertical-text">
+                        <span class="font-weight-bold">Payment Method</span>
+                        <span>Secure Payment</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+	<div class="container-fluid">
+		<div class="row" {{$path = ''}}>
+			@if($categoryProduct[0] == 'cat-001')				
+			<div class="col-6" {{$path = 'books/'}}>
+			@endif	
+				@if($categoryProduct[0] == 'cat-002')				
+				<div class="col-6" {{$path = 'films/'}}>
+				@endif
+					@if($categoryProduct[0] == 'cat-003')				
+					<div class="col-6" {{$path = 'vgames/'}}>
+					@endif	
+					@csrf					
+						<div class="jumbotron" >
+			
+							<img src="{{ asset('images/'.$path.$response->product_image) }}" width="400px"> 
+							<br><br>
+							<p> Title : {{$response->product_name}}</p>
+							<p> Description : {{$response->product_description}}</p>
+							<p> Price : {{$response['product_price']}}</p>
+							
+							<a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $response->product_id, 'user_id' => 5])}}">Add to cart</a>
+						</div> 
+					</div>
+				<div>
+				<?php $imagesDir = 'images/'.$path;
+				$images = glob($imagesDir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+				$randomImage = $images[array_rand($images)]; // See comments?>	
+
+  					<a class="navbar-brand" href="details/{{$response['product_id']}}">
+					<img src="{{ asset($randomImage ) }}" width="180px">
+					</a>
+					<br><br>
+					<p> Title : {{$response->product_name}}</p>
+					{{-- <p> Description : {{$response->product_description}}</p> --}}
+					<p> Price : {{$response['product_price']}}</p>
+					<a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $response->product_id, 'user_id' => 5])}}">Add to cart</a>
+				</div>
+				<div>
+					<?php $imagesDir = 'images/'.$path;
+					$images = glob($imagesDir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+					$randomImage = $images[array_rand($images)]; // See comments?>	
+					<img src="{{ asset($randomImage) }}" width="180px">
+					<br><br>
+					<p> Title : {{$response->product_name}}</p>
+					<p> Description : {{$response->product_description}}</p>
+					<p> Price : {{$response['product_price']}}</p>
+					<a class="btn btn-success" href="{{route('cart.addProduct', ['product_id' => $response->product_id, 'user_id' => 5])}}">Add to cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<hr>
+<hr>
+
+<div class="wrapper">
+    <section>
+        <h3 class="font-weight-bold mt-5 mb-4">Featured Book Products</h3>
+        <nav class="selected-products">
+            <ul class="selected-products-items px-0">
+                <li class="s-p-items m-0">Cinema</li>
+                <li class="s-p-items m-0 active">Geography</li>
+                <li class="s-p-items m-0">Art History</li>
+                <li class="s-p-items m-0">Gamers</li>
+                <li class="s-p-items m-0">Philosophy</li>
+                <li class="s-p-items m-0">Humanities</li>
+                <li class="s-p-items m-0">Mathematic</li>
+                <li class="s-p-items m-0">Sports</li>
+                <li class="s-p-items m-0">Nature</li>
+                <li class="s-p-items m-0">Living Styles</li>
+                <li class="s-p-items m-0">Other</li>
+            </ul>
+        </nav>
+        <div class="container-fluid mt-3 mb-3">
+        </div>
+    </section>
+
+</div>
+
+
+<div class="container-fluid wrapper">
+    <div class="section products">
+        <div class="row wrapper">               
+			@foreach ($productsOfCat as $product)
+				<div class="mr-lg-auto" >
+					@csrf
+					<div class="card card-size">	
+						<img class="card-img-top" alt="Card image cap" src="{{ asset('images/'.$path.$product->product_image) }}" >
+						<p class="m-0 mt-1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="90" height="15" viewBox="0 0 78 11.497">
+								<g id="Groupe_313" data-name="Groupe 313" transform="translate(-116 -1824)">
+									<path id="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(116.001 1822.953)" fill="#ff1744" />
+									<path id="star-2" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(150.001 1822.953)" fill="#ff1744" />
+									<path id="star-3" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(133.001 1822.953)" fill="#ff1744" />
+									<path id="star-4" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(167.001 1822.953)" fill="#ff1744" />
+									<path id="star-5" data-name="star" d="M11.739,6.257a.861.861,0,0,0-.477-1.468L8.356,4.367a.38.38,0,0,1-.286-.208l-1.3-2.633a.861.861,0,0,0-1.543,0l-1.3,2.633a.38.38,0,0,1-.286.208L.737,4.789A.861.861,0,0,0,.26,6.257l2.1,2.049a.38.38,0,0,1,.11.336l-.5,2.894a.843.843,0,0,0,.188.7.87.87,0,0,0,1.061.209l2.6-1.366a.389.389,0,0,1,.354,0l2.6,1.366a.852.852,0,0,0,.4.1.863.863,0,0,0,.66-.309.842.842,0,0,0,.188-.7l-.5-2.894a.38.38,0,0,1,.11-.336Z" transform="translate(182.001 1822.953)" fill="#e2e2e2" />
+								</g>
+							</svg>
+						</p>
+						<p class="m-0 pt-1">{{$product->product_name}}</p>
+						<p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_description}}</span>
+						<p class="m-0 font-weight-bold"><span class="align-text-bottom">{{$product->product_price}}</span>
+						</p>
+						<!-- <input type="button" value="Add to cart"> -->
+					</div>
+				</div>
+			@endforeach
+        </div>
+    </div>
+</div>
+
+
+	
+</body> 

@@ -2,7 +2,6 @@
 <div id="zoneCarousel" class="container-fluid">
     <img id="idImage" src="" />
 </div>
-
 <!-- Banner Section -->
 <div class="wrapper">
     <section id="zonePub">
