@@ -338,7 +338,7 @@
 <!-- VGames Section -->
 <div class="wrapper">
     <section>
-        <h3 class="font-weight-bold mt-5 mb-4">Featured Video Game Products</h3>
+        <h3 class="font-weight-bold mt-5 mb-4">Featured Video Games</h3>
         <nav class="selected-products">
             <ul class="selected-products-items px-0">
                 <li class="s-p-items m-0 active">Play Station 4</li>
