@@ -16,19 +16,8 @@
 
      
        <hr>  
-@if(count($tabIdSubCatBooks)>0) 
-       {{$tabIdSubCatBooks}} 
-@endif
-       <hr> 
-@if(count($tabIdSubCatFilms)>0) 
 
-       {{$tabIdSubCatFilms}} 
-@endif
-        <hr>   
-@if(count($tabIdSubCatGames)>0) 
 
-       {{$tabIdSubCatGames}} 
-@endif
 
     <?php
 // {{ $commandLine->product->product_image }}
