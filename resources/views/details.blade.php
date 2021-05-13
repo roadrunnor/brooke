@@ -1,32 +1,4 @@
 @include('headerDetails')
-
-
-
-<style>
-body{
-    font-family: 'Roboto', Helvetica;
-    font-size: 1rem;
-    }
-.wrapper {
-    margin: 0 auto;
-    width: 1200px;
-	
-}
-
-.addToCard{
-	text-align: left;
-	border-radius: 5em;
-	border: none;
-	
-}
-
-.card1-size{
-	width: 186px;
-	height: 350px;	
-}
-
-
-</style>
 <!-- Banner Section -->
 <body onload="javascript:showCarousel();">
 	<div class="container-fluid">
