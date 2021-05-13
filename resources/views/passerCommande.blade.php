@@ -31,6 +31,7 @@
       return actions.order.capture().then(function(details) {
         // This function shows a transaction success message to your buyer.
         alert('Transaction completed by ' + details.payer.name.given_name);
+       
       });
     }
   }).render('#paypal-button-container');

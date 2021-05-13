@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\SubCategory;
+use App\Models\User;
 use Facade\FlareClient\Http\Response;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\DB;
@@ -26,6 +27,8 @@ class ProductController extends Controller
       $subCatIdFilm = Product::whereIn('sub_category_id', $subCatId[2])->get();
       $subCatIdVideoGame = Product::whereIn('sub_category_id', $subCatId[3])->get();
       //-----Partie panier---------
+      //$user_id = User::session(auth()->id())->getContent();
+      //$cart = Cart::where('user_id', $user_id)->first();
       $cart = Cart::find(1);
       $nbArticles = $cart->nbArticles;
       //-----Fin de partie panier---------
