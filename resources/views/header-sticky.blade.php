@@ -1,60 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Brooke & Co. - Laravel Version</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="/main.css" />
-</head>
-<!-- Onload fonctions showCarousel(); chargerZoneItem(); -->
-
-<body onload="javascript:showCarousel();">
-    <!-- Header -->
-    <div class=" header">
-        <div class="top-bar theme-bg-primary-darken">
-            <div class="container-fluid">
-                <!-- navbar red -->
-                <nav class="navbar navbar-expand-lg navbar-primary position-relative">
-                    <div class="wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237 236.36" style="fill:#000" width="100" height="100">
-                            <path d="M119,67.11A33.15,33.15,0,1,1,152.14,34,33.14,33.14,0,0,1,119,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="100ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M119,152.14A33.14,33.14,0,1,1,152.14,119,33.13,33.13,0,0,1,119,152.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="300ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M204.36,152.14A33.14,33.14,0,1,1,237.5,119a33.14,33.14,0,0,1-33.14,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="600ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M119,237.18A33.15,33.15,0,1,1,152.14,204,33.14,33.14,0,0,1,119,237.18" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="800ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,237.18A33.15,33.15,0,1,1,66.79,204a33.14,33.14,0,0,1-33.15,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="400ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,67.11A33.15,33.15,0,1,1,66.79,34,33.15,33.15,0,0,1,33.64,67.11" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="500ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                            <path d="M33.64,152.14A33.14,33.14,0,1,1,66.79,119a33.14,33.14,0,0,1-33.15,33.14" transform="translate(-0.5 -0.82)" fill-opacity="0.5">
-                                <animate attributeName="fill-opacity" begin="200ms" dur="1s" values="1;.2;1" calcMode="linear" repeatCount="indefinite" />
-                            </path>
-                        </svg>
-                    </div>
-                </nav>
-                <!-- navbar sticky (navbar black & navbar Brooke & Co.) -->
+                <!-- navbar sticky - navbar black & navbar Brooke & Co. -->
                 <div id="navbar">
                     <!-- navbar black -->
                     <nav class="navbar navbar-expand-lg bg-dark">
                         <div class="wrapper">
-                            <!-- navbar black left 2 items -->
                             <ul class="navbar-nav ml-auto">
+                                <!-- navbar black left 2 items -->
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="">
                                         <span class="pr-2">
@@ -86,15 +36,6 @@
                                         member@brooke-co.com
                                     </a>
                                 </li>
-                                <?php
-                                if (isset($_SESSION["email"])) {
-                                    echo '<li class="nav-item"><a class="nav-link text-white" 
-                                            href="controllers/Logout.php">Disconnect</a></li>';  // Logout
-                                } else {
-                                    echo '<li class="nav-item"><a class="nav-link text-white" 
-                                            href="Connexion.php"></a></li>';   // login connexion was here remore
-                                }
-                                ?>
                                 <!-- navbar black right - 6 items -->
                                 <li class="nav-item ml-lg-auto">
                                     <a class="nav-link text-white" href="Inscription.php">
@@ -187,73 +128,24 @@
                                                         </g>
                                                     </g>
                                                 </g>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                    Payment</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="Contact.php">
-                                    <span class="pr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="11.75" viewBox="0 0 18 11.75">
-                                            <g id="delivery-truck" clip-path="url(#clip-path)">
-                                                <path id="delivery-truck-2" data-name="delivery-truck" d="M17.992,94.979c-.07-.358-.691-3.511-.844-3.971a8.54,8.54,0,0,0-2.368-3.37A5.475,5.475,0,0,0,11.487,86H2.4a.855.855,0,0,0-.854.854v1.342H.915a.418.418,0,1,0,0,.836h.629v1H.418a.418.418,0,1,0,0,.836H1.544v4.2a.855.855,0,0,0,.854.854H3.44a2.153,2.153,0,0,0,4.258,0h3.833a2.153,2.153,0,0,0,4.258,0h1.356A.855.855,0,0,0,18,95.06.421.421,0,0,0,17.992,94.979Zm-1.685-3.842H12V86.907A7.935,7.935,0,0,1,16.307,91.137ZM5.569,96.91a1.317,1.317,0,1,1,1.317-1.317A1.319,1.319,0,0,1,5.569,96.91Zm8.092,0a1.317,1.317,0,1,1,1.317-1.317A1.319,1.319,0,0,1,13.661,96.91Zm3.464-1.832H15.752a2.153,2.153,0,0,0-4.182,0H7.66a2.153,2.153,0,0,0-4.182,0H2.4a.018.018,0,0,1-.018-.018v-4.2H7.5a.418.418,0,1,0,0-.836H2.38v-1H4.737a.418.418,0,0,0,0-.836H2.38V86.85a.018.018,0,0,1,.018-.018h8.767v4.723a.418.418,0,0,0,.418.418h4.941c.178.813.423,2.115.631,3.079C17.159,95.072,17.147,95.078,17.125,95.078Z" transform="translate(0 -85.996)" fill="#fff" opacity="0.8" />
-                                            </g>
-                                        </svg>
-                                    </span>
-                                    Delivery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('logout') }}">
-                                    <span class="pr-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
-                                            <g id="user" clip-path="url(#clip-path)">
-                                                <g id="user-2" data-name="user" transform="translate(0)" opacity="0.8">
-                                                    <g id="Groupe_7" data-name="Groupe 7" transform="translate(0)">
-                                                        <path id="Tracé_5" data-name="Tracé 5" d="M13.965,12a.547.547,0,0,0-1.071.223.571.571,0,0,1-.116.479.556.556,0,0,1-.437.208H1.66a.556.556,0,0,1-.437-.208.571.571,0,0,1-.116-.479A6.042,6.042,0,0,1,6.855,7.435l.145,0,.146,0A6.016,6.016,0,0,1,12,10.105a.547.547,0,1,0,.908-.609A7.113,7.113,0,0,0,9.227,6.7a3.719,3.719,0,1,0-4.451,0A7.113,7.113,0,0,0,.036,12,1.661,1.661,0,0,0,1.66,14H12.341a1.661,1.661,0,0,0,1.624-2ZM4.375,3.719A2.625,2.625,0,1,1,7.133,6.34H6.868A2.628,2.628,0,0,1,4.375,3.719Z" transform="translate(0)" fill="#fff" />
-                                                    </g>
                                                 </g>
-                                            </g>
-                                        </svg>
-                                    </span>
-                                    Logout</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                    <!-- navbar brooke & co -->
-                    {{-- <nav class="navbar navbar-expand-lg navbar-light bg-pink">
-                    <div class="wrapper navbar p-0">
-                        <!-- navbar brooke et co -->
-                        <h1 class="brookebrand m-0"><span class="align-middle">brooke & co.</span></h1>
-                        <!-- hamburger menu -->
-                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- navbar menu-items and searchbar -->
-                        <div class="collapse navbar-collapse" id="collapsibleNavId">
-                            <!-- searchbar -->
-                            <form class="form-inline ml-5 mr-3 my-2 mt-lg-3">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                            <!-- icons heart and cart -->
-                            <ul class="navbar-nav ml-lg-auto">
-                                <li class="nav-item ml-5">
-                                    <a class="nav-link text-white" href="#">
-                                        <span class="list-item pr-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 23">
-                                                <g id="heart" clip-path="url(#clip-path)">
-                                                    <g id="Groupe_20" data-name="Groupe 20">
-                                                        <path id="Tracé_13" data-name="Tracé 13" d="M27.637,41.987a7.952,7.952,0,0,0-5.723-2.315,7.512,7.512,0,0,0-6.877,3.667L15,43.4l-.037-.062a7.512,7.512,0,0,0-6.877-3.667,7.952,7.952,0,0,0-5.723,2.315A8.592,8.592,0,0,0,0,48.184c0,5.285,4.7,8.789,8.843,11.881a29.793,29.793,0,0,1,5.244,4.521,1.172,1.172,0,0,0,1.826,0,17.9,17.9,0,0,1,2.763-2.626,1.172,1.172,0,0,0-1.468-1.827A25.33,25.33,0,0,0,15,62.1a41.389,41.389,0,0,0-4.756-3.91c-3.884-2.9-7.9-5.893-7.9-10,0-3.632,2.361-6.168,5.742-6.168a5.262,5.262,0,0,1,4.825,2.458,6.816,6.816,0,0,1,.921,2.651,1.172,1.172,0,0,0,2.336.005,6.813,6.813,0,0,1,.921-2.656,5.262,5.262,0,0,1,4.825-2.458c3.381,0,5.742,2.537,5.742,6.168,0,3.4-2.769,6.037-5.761,8.38a1.172,1.172,0,1,0,1.445,1.845,24.843,24.843,0,0,0,4.554-4.389A9.517,9.517,0,0,0,30,48.184,8.592,8.592,0,0,0,27.637,41.987Z" transform="translate(0 -39.672)" fill="#363636" />
-                                                    </g>
+                                            </svg>
+                                        </span>
+                                        Payment</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="Contact.php">
+                                        <span class="pr-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="11.75" viewBox="0 0 18 11.75">
+                                                <g id="delivery-truck" clip-path="url(#clip-path)">
+                                                    <path id="delivery-truck-2" data-name="delivery-truck" d="M17.992,94.979c-.07-.358-.691-3.511-.844-3.971a8.54,8.54,0,0,0-2.368-3.37A5.475,5.475,0,0,0,11.487,86H2.4a.855.855,0,0,0-.854.854v1.342H.915a.418.418,0,1,0,0,.836h.629v1H.418a.418.418,0,1,0,0,.836H1.544v4.2a.855.855,0,0,0,.854.854H3.44a2.153,2.153,0,0,0,4.258,0h3.833a2.153,2.153,0,0,0,4.258,0h1.356A.855.855,0,0,0,18,95.06.421.421,0,0,0,17.992,94.979Zm-1.685-3.842H12V86.907A7.935,7.935,0,0,1,16.307,91.137ZM5.569,96.91a1.317,1.317,0,1,1,1.317-1.317A1.319,1.319,0,0,1,5.569,96.91Zm8.092,0a1.317,1.317,0,1,1,1.317-1.317A1.319,1.319,0,0,1,13.661,96.91Zm3.464-1.832H15.752a2.153,2.153,0,0,0-4.182,0H7.66a2.153,2.153,0,0,0-4.182,0H2.4a.018.018,0,0,1-.018-.018v-4.2H7.5a.418.418,0,1,0,0-.836H2.38v-1H4.737a.418.418,0,0,0,0-.836H2.38V86.85a.018.018,0,0,1,.018-.018h8.767v4.723a.418.418,0,0,0,.418.418h4.941c.178.813.423,2.115.631,3.079C17.159,95.072,17.147,95.078,17.125,95.078Z" transform="translate(0 -85.996)" fill="#fff" opacity="0.8" />
                                                 </g>
                                             </svg>
                                         </span>
                                         Delivery</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="Contact.php">
+                                    <a class="nav-link text-white" href="{{ route('logout') }}">
                                         <span class="pr-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14">
                                                 <g id="user" clip-path="url(#clip-path)">
@@ -265,11 +157,11 @@
                                                 </g>
                                             </svg>
                                         </span>
-                                        Register or Sign in</a>
+                                        Logout</a>
                                 </li>
                             </ul>
                         </div>
-                    </nav> --}}
+                    </nav>
                     <!-- navbar brooke & co -->
                     <nav class="navbar navbar-expand-lg navbar-light pt-3 pb-3 bg-pink">
                         <div class="wrapper navbar p-0">
@@ -345,7 +237,9 @@
                                 </ul>
                             </div>
                             <!-- hamburger menu -->
-                            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" 
+                                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" 
+                                aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
@@ -379,31 +273,28 @@
                                     </svg>
                                 </span>
                                 <a class="nav-link navbar-brand pl-4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">all categories
-
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {{-- @foreach ($categoryName as $Cat)
-                                        
-                                    @endforeach --}}
-                                  
-                                    <a class="dropdown-item" href="/cattegoryBooks">Books</a>
+                                                @endforeach --}}
+                                    <a class="dropdown-item" href="/categoryBooks">Books</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/cattegoryFilms">Films</a>
+                                    <a class="dropdown-item" href="/categoryFilms">Films</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/cattegoryVgames">Video Games</a>
+                                    <a class="dropdown-item" href="/categoryVgames">Video Games</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </li>
                             <!-- Navbar Items -->
                             <li class="nav-item pl-5 pr-5">
-                                <a class="nav-link" href="/cattegoryBooks">books</a>
+                                <a class="nav-link" href="/categoryBooks">books</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-5 pr-5" href="/cattegoryFilms">films</a>
+                                <a class="nav-link pl-5 pr-5" href="/categoryFilms">films</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link pl-5 pr-5" href="/cattegoryVgames">video games</a>
+                                <a class="nav-link pl-5 pr-5" href="/categoryVgames">video games</a>
                             </li>
                         </ul>
                     </div>
@@ -411,21 +302,3 @@
             </div>
         </div>
     </div>
-
-    <script>
-        window.onscroll = function() {
-            stickynavbar()
-        };
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function stickynavbar() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky");
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
-    

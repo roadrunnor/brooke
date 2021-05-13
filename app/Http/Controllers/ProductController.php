@@ -58,26 +58,26 @@ public function menu(){
         // redirect()->route('dtails.getDetail',['response'=>$response, 'productsOfCat'=>$productsOfCat]); 
     }
 
-    public function cattegoryBooks(){
+    public function categoryBooks(){
       $subCategory = SubCategory::where('category_id','=', "cat-001")->get()->pluck('sub_category_id');
       $catBooks = Product::whereIn('sub_category_id', $subCategory)->get();
-     return view('cattegoryBooks', ['catBooks'=>$catBooks, 'subCategory'=>$subCategory]);
+     return view('categoryBooks', ['catBooks'=>$catBooks, 'subCategory'=>$subCategory]);
 
       // return $catBooks;
 
     }
-    public function cattegoryFilms(){
+    public function categoryFilms(){
       $subCategory = SubCategory::where('category_id','=', "cat-002")->get()->pluck('sub_category_id');
       $catFilms = Product::whereIn('sub_category_id', $subCategory)->get();
-      return view('cattegoryFilms', ['catFilms'=>$catFilms, 'subCategory'=>$subCategory]);
+      return view('categoryFilms', ['catFilms'=>$catFilms, 'subCategory'=>$subCategory]);
 
       // return $catBooks;
 
     }
-    public function cattegoryVgames(){
+    public function categoryVgames(){
       $subCategory = SubCategory::where('category_id','=', "cat-003")->get()->pluck('sub_category_id');
       $catVgames = Product::whereIn('sub_category_id', $subCategory)->get();
-      return view('cattegoryVgames', ['catVgames'=>$catVgames, 'subCategory'=>$subCategory]);
+      return view('categoryVgames', ['catVgames'=>$catVgames, 'subCategory'=>$subCategory]);
 
       // return $catBooks;
           //$categoryId = Category::pluck('category_id');

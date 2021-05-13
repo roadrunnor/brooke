@@ -28,9 +28,9 @@ Route::get('/passerCommande/{user_id}/{cart_id}',[CartController::class, 'passer
 //---------Routage Products--------------------
 Route::get('/product',[ProductController::class, 'getProducts'])->name('getAll.getProducts');
 Route::get('/details/{product_id}', [ProductController::class, 'getDetail']);
-Route::get('/cattegoryBooks', [ProductController::class, 'cattegoryBooks']);
-Route::get('/cattegoryFilms', [ProductController::class, 'cattegoryFilms']);
-Route::get('/cattegoryVgames', [ProductController::class, 'cattegoryVgames']);
+Route::get('/categoryBooks', [ProductController::class, 'categoryBooks']);
+Route::get('/categoryFilms', [ProductController::class, 'categoryFilms']);
+Route::get('/categoryVgames', [ProductController::class, 'categoryVgames']);
 Route::get('/header',[ProductController::class,'menu'])->name('header');
 
 // Route::get('/categoryBooks/subCinemaBook', [ProductController::class,'subCinemaBook'])->nsme('category.subCinemaBook');

@@ -76,6 +76,10 @@ a.link-on-resume {
     | nav-bar red
     |-----------------------------------------------------|
 */
+.navbar-hidden{
+    padding: 16em;
+    height: 60em;
+}
 .header {
     height: 15.5em;
 }
@@ -444,9 +448,17 @@ li.s-p-items.m-0.list-group-item {
 
 /*
     |-----------------------------------------------------|
-    | Ricardo CSS
+    | Footer
     |-----------------------------------------------------|
 */
+
+.bg-footer{
+    background-color: #979797;
+}
+
+.bg-extra-footer{
+    background-color: #646464;
+}
 
 .addToCard {
     text-align: left;
@@ -458,6 +470,10 @@ li.s-p-items.m-0.list-group-item {
 .card1-size {
     width: 186px;
     height: 350px;
+}
+
+a.nav-link.text-white {
+    padding-bottom: 0;
 }
 
 
