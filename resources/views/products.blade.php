@@ -223,7 +223,7 @@
                 </div>
             </div>
         </section>
-        
+
 
         <!-- Film Section -->
         <section>
@@ -350,8 +350,8 @@
                     <div class="card mb-3">
                         <div class="card-content">
                             <a class="card-img" href="{{ url('/details')}}">
-                                {{-- <img src="{{ asset('images/vgames/PS4/') }}"> --}}
-                                <img class="card-img-top" alt="Card image cap" src="{{ asset('images/vgames/PS4/'.$product->product_image) }}">
+                                {{-- <img src="{{ asset('images/vgames/') }}"> --}}
+                                <img class="card-img-top" alt="Card image cap" src="{{ asset('images/vgames/'.$product->product_image) }}">
                             </a>
                             <p class="card-stars m-0 mt-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="70" height="10" viewBox="0 0 78 11.497">
