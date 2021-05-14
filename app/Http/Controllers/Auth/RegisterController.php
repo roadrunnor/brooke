@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use CreateCartsTable;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -79,4 +80,10 @@ class RegisterController extends Controller
         $cart->orderStatus = "init";
         $cart->save();
     }
+
+    //--------------------------------
+    // function public CreateCartsTable(){
+    //     return $cart
+    // }
+    //----------------------------------
 }
