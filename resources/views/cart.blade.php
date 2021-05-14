@@ -13,6 +13,12 @@
 </head>
 <body>
 
+
+     
+       <hr>  
+
+
+
     <?php
 // {{ $commandLine->product->product_image }}
         use App\Models\Product;
@@ -37,12 +43,20 @@ use App\Http\Controllers\CartController;
             </tr>
             </thead>
             <tbody>
-            <?php $totalQuantity = 0; $i = 1; $saved = 0; $totalPrix = 0;?>
+            <?php $totalQuantity = 0; $i = 1; $saved = 0; $totalPrix = 0;$pathInter = "books"; ?>
             @if($carts != null)            
             @foreach($carts[0]->commandLines()->get() as  $commandLine)
+            
                 <tr>
                     <td> {{$i++}} </td>
-                    <td> <img class="rounded" width="75" height="auto" src="images/{{ $commandLine->product->product_image }}" alt="{{ $commandLine->product->product_name }}"></td>
+                    @if($tabIdSubCatFilms->contains($commandLine->product->sub_category_id))
+                        {{$pathInter = 'films'}}
+                    @endif
+
+                    @if($tabIdSubCatGames->contains($commandLine->product->sub_category_id))
+                        {{$pathInter = 'vgames'}}
+                    @endif
+                    <td> <img class="rounded" width="75" height="auto" src="images/{{$pathInter}}/{{$commandLine->product->product_image }}" alt="{{ $commandLine->product->product_name }}"></td>
                     <td>{{ $commandLine->product->product_name }}</td>  
                     <td>{{ $commandLine->product->product_price }}</td> 
                     <td>{{ $commandLine->product->product_promotion_price }}</td> 

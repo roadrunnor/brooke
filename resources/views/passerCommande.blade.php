@@ -8,7 +8,7 @@
 <body>
 <!-- Dans le fichier env met PAYPAL_ID=ta sandbox client ID -->
 <script
-    src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_ID')}}"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+    src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_ID')}}&currency=CAD"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
   </script>
 
 <div id="paypal-button-container"></div>
@@ -21,6 +21,7 @@
       return actions.order.create({
         purchase_units: [{
           amount: {
+            // "currency_code": "CAD",
             value: '{{ $cart->total }}'
           }
         }]
@@ -31,7 +32,8 @@
       return actions.order.capture().then(function(details) {
         // This function shows a transaction success message to your buyer.
         alert('Transaction completed by ' + details.payer.name.given_name);
-      });
+       
+      }).then(location.replace("{{route('destroyCart.cart', ['id' => 1])}}"));
     }
   }).render('#paypal-button-container');
   //This function displays Smart Payment Buttons on your web page.
