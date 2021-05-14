@@ -81,7 +81,7 @@ a.link-on-resume {
     height: 60em;
 }
 .header {
-    height: 15.5em;
+    height: 12.5em;
 }
 
 .container-fluid {
@@ -392,6 +392,11 @@ li.s-p-items.m-0.list-group-item {
     color: #f1f1f1;
 }
 
+.curtains{
+    margin-bottom: 12px;
+    box-shadow: 0em 0.451em 0.432em #000000;
+}
+
 /*
     |-----------------------------------------------------|
     | products card 
@@ -445,6 +450,10 @@ li.s-p-items.m-0.list-group-item {
     transform: translateY(0);
 }
 
+.col.list-group.list-group-horizontal-lg {
+    height: fit-content;
+}
+
 
 /*
     |-----------------------------------------------------|
@@ -461,10 +470,23 @@ li.s-p-items.m-0.list-group-item {
 }
 
 .addToCard {
-    text-align: left;
+    padding: .25em 1.5em;
+    margin-top: .765em;
+    text-align: center;
     border-radius: 5em;
-    border: none;
+    border: 2px solid #FF1744;
+    color: #FF1744;
+}
 
+.addToCard:hover {
+    text-align: center;
+    border-radius: 5em;
+    background-color: #FF1744;
+    color: white;
+}
+
+.lh{
+     line-height: .5em;
 }
 
 .card1-size {
@@ -472,8 +494,16 @@ li.s-p-items.m-0.list-group-item {
     height: 350px;
 }
 
+.synopsis {
+    font-size: 14px;
+}
+
 a.nav-link.text-white {
     padding-bottom: 0;
+}
+
+.curtain-light{
+    box-shadow: 0em .1em .52em gray;
 }
 
 

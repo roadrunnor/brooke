@@ -16,119 +16,59 @@ class ProductController extends Controller
    
     public function getProducts()
     {
-     // $titles = DB::table('users')->pluck('title');
+
       $category = Category::pluck('category_id');
-      // $categoryName = Category::pluck('category_name');
-       $i = 1;
+
+      $i = 1;
       foreach ($category as $bigCat) {
         $subCatId[$i++] = SubCategory::get()->where('category_id', $bigCat)->pluck('sub_category_id');
       }
       $subCatIdBook = Product::whereIn('sub_category_id', $subCatId[1])->get();
       $subCatIdFilm = Product::whereIn('sub_category_id', $subCatId[2])->get();
       $subCatIdVideoGame = Product::whereIn('sub_category_id', $subCatId[3])->get();
-      //-----Partie panier---------
-      //$user_id = User::session(auth()->id())->getContent();
-      //$cart = Cart::where('user_id', $user_id)->first();
+
       $cart = Cart::find(1);
       $nbArticles = $cart->nbArticles;
-      //-----Fin de partie panier---------
-      return view('products', ['subCatIdBook'=>$subCatIdBook, 'subCatIdFilm'=>$subCatIdFilm, 'subCatIdVideoGame'=>$subCatIdVideoGame, 'nbArticles'=> $nbArticles]);
-      
+
+      return view('products', ['subCatIdBook'=>$subCatIdBook, 'subCatIdFilm'=>$subCatIdFilm, 'subCatIdVideoGame'=>$subCatIdVideoGame, 'nbArticles'=> $nbArticles]);      
     }
-public function menu(){
+
+    public function menu(){
     $categoryName = Category::pluck('category_name');
    
   return view('header' ,['categoryName'=>$categoryName]);
   
 }
-    //detail du produit par son id
     public function getDetail($id)
     {
-        //===== trouver un produit
         $response = Product::find($id);
-
-        //touver ID sous categorie de ce produit (pour chercher son category) 
         $subCatProduct = SubCategory::where('sub_category_id', '=',  $response->sub_category_id)->get();
-
-        //===== Réqupérer Category_Id du produit (ex: En cliquant sur un livre, il va chreche cat livre et ...)
-          $categoryProduct = $subCatProduct->pluck('category_id') ;   
-        //====================   
-        
-        // il a trouvé la categorie du produit que vous avez cliqué
+        $categoryProduct = $subCatProduct->pluck('category_id') ;   
         $subCatResponse = SubCategory::where('category_id', '=',  $categoryProduct)->get(); 
-        
-        // chercher tous les porduits de ce categorie   
         $productsOfCat = Product::whereIn('sub_category_id', $subCatResponse)->get();
         return view('details', ['response'=>$response, 'productsOfCat'=>$productsOfCat, 'categoryProduct'=>$categoryProduct]);
-        // view('details', ['response'=>$response, 'productsOfCat'=>$productsOfCat]);
-       
-       
-        // redirect()->route('dtails.getDetail',['response'=>$response, 'productsOfCat'=>$productsOfCat]); 
     }
 
     public function categoryBooks(){
       $subCategory = SubCategory::where('category_id','=', "cat-001")->get()->pluck('sub_category_id');
       $catBooks = Product::whereIn('sub_category_id', $subCategory)->get();
      return view('categoryBooks', ['catBooks'=>$catBooks, 'subCategory'=>$subCategory]);
-
-      // return $catBooks;
-
     }
+
     public function categoryFilms(){
       $subCategory = SubCategory::where('category_id','=', "cat-002")->get()->pluck('sub_category_id');
       $catFilms = Product::whereIn('sub_category_id', $subCategory)->get();
       return view('categoryFilms', ['catFilms'=>$catFilms, 'subCategory'=>$subCategory]);
-
-      // return $catBooks;
-
     }
+
     public function categoryVgames(){
       $subCategory = SubCategory::where('category_id','=', "cat-003")->get()->pluck('sub_category_id');
       $catVgames = Product::whereIn('sub_category_id', $subCategory)->get();
       return view('categoryVgames', ['catVgames'=>$catVgames, 'subCategory'=>$subCategory]);
-
-      // return $catBooks;
-          //$categoryId = Category::pluck('category_id');
-    // $i = 1;
-    // foreach ($categoryId as  $cat) {
-    //   $subCatsId[$i++] = SubCategory::where('category_id','$cat')->pluck('sub_category_id');
-    //   $j=1;
-    //   foreach ($ $subCatsId[$i] as $subId) {
-    //     $subCat[$j++] = Product::where('sub_category_id',$subId)->get();
-        
-    //   }
-    // }
-
     }
 
     public function subCinemaBook(){
 
       return "";
     }
-
   }  
-       
-       
-       
-       
-       
-       
-       
-       
-        // return view('details', ['response'=>$response]);
-      // return $productsOfCat; 
-
-
-
-
-
-
-       //$subsCatId = SubCategory::whereIn('category_id', '=',  $subCatProduct->category_id)->get();
-      // $bookDetail = Product::find($id)->book;
-
-      // $filmDetail = Product::find($id)->film;
-      // $vGameDetail = Product::find($id)->videoGame;
-      // return $response."  ******** ".$bookDetail." ==========+++==== ".$filmDetail."   ++++++++++++  ".$vGameDetail ;
-      //return view('details', ['response'=>$response], ['bookDetail'=>$bookDetail], ['filmDetail'=>$filmDetail], ['vGameDetail'=>$filmDetail]);
-      
-   

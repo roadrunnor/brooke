@@ -224,6 +224,12 @@
                                     <li class="nav-item ml-lg-auto">
                                         <a class="nav-link text-white" href="{{route('cart.show')}}">
                                             <span class="list-item pr-2">
+                                                <?php
+                                                use App\Models\Cart;
+                                                $cart = Cart::find(1);
+                                                $nbArticles = $cart->nbArticles;
+                                                ?>
+                                                <span style="color: black;" id="nombreDeProduit">{{ $nbArticles }}</span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
                                                     <g id="shopping-cart" clip-path="url(#clip-path)">
                                                         <g id="Groupe_19" data-name="Groupe 19">
@@ -237,9 +243,7 @@
                                 </ul>
                             </div>
                             <!-- hamburger menu -->
-                            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" 
-                                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" 
-                                aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
@@ -299,6 +303,6 @@
                         </ul>
                     </div>
                 </nav>
-            </div>
-        </div>
-    </div>
+                </div>
+                </div>
+                </div>

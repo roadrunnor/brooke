@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Brooke & Co. - Laravel Version</title>
@@ -12,8 +13,10 @@
     <script src="/js/main.js"></script>
     <link rel="stylesheet" href="/main.css" />
 </head>
+
 <body onload="javascript:showCarousel();">
     <!-- Header -->
-    <div class="header">
-        <div class="top-bar theme-bg-primary-darken">
-            <div class="container-fluid">
+    <div class="curtains pb-5">
+        <div class="header">
+            <div class="top-bar theme-bg-primary-darken">
+                <div class="container-fluid">
